@@ -1,7 +1,14 @@
-* {
-    margin: 200em 5% 5%;
+#bouton_developper {
+    margin: 2em 2em 2em 2em;
+    margin-bottom: 0%;
 }
 
-#bouton_delopper button {
-    margin: 2000em 5% 5%;
+ul {
+    padding: 0%;
+}
+
+.rectangle,
+.cut_circle,
+.to_delete {
+    margin-bottom: 2em;
 }

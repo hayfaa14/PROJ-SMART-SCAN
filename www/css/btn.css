@@ -1,15 +1,12 @@
 button {
     display: inline-block;
-    height: 50px;
+    height: 150px;
     padding: 0;
     margin: 0;
     vertical-align: top;
-    width: 50px;
+    width: 150px;
 }
 
-.bouton_developper img {
-    display: block;
-    height: 50;
-    width: 50;
-    background-position: center;
+#bouton_developper {
+    border-radius: 90px;
 }
