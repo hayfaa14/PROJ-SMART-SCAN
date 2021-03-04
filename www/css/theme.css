@@ -3,3 +3,14 @@
     background-size: cover;
     background-position: fill;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+image {
+    max-width: 10%;
+    height: auto;
+}
