@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barre Option</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link type="text/css" rel="stylesheet" href="css/node_modules/materialize-css/dist/css/materialize.min.css" media="screen,projection" />
 </head>
 
 <body>
@@ -14,18 +15,17 @@
     </header>
     <main>
         <section>
-
-            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i>
-        
-                <ul id="menu_deroulant" style="display: none;">
-                    <br><a href="rectangle_cut.php" class="rectangle" type="button"><input type="image"
-                            src="assets/Rectangle_Cut.png"></a>
-            <br>
-            <a href="cut_circle.php" class="cut_circle" type="button"><input type="image" src="assets/Cut_circle.png"></a>
-            <br>
-            <a href="to_delete.php" class="to_delete" type="button"><input type="image" src="assets/CrossCircle.png"></a>
+            <button class="btn-floating btn-large waves-effect waves-light green" onfocus="document.getElementById('menu_deroulant').style.display = 'inline';
+            " onblur="document.getElementById('menu_deroulant').style.display = 'none';">+</button>
+            <ul id="menu_deroulant" style="display: none;">
+                <br>
+                <a href="rectangle_cut.php" class="rectangle" type="button"><input type="image" src="assets/Rectangle_Cut.png"></a>
+                <br>
+                <a href="cut_circle.php" class="cut_circle" type="button"><input type="image" src="assets/Cut_circle.png"></a>
+                <br>
+                <a href="to_delete.php" class="to_delete" type="button"><input type="image" src="assets/CrossCircle.png"></a>
             </ul>
-            </a>
+
         </section>
     </main>
     <footer>
