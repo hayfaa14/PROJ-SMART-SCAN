@@ -15412,7 +15412,8 @@ button {
 #menu_deroulant {
   display: inline-block;
   max-width: 40px;
-  max-height: 40px; }
+  max-height: 40px;
+  margin-left: 3em; }
 
 .rectangle img {
   width: 3em;
