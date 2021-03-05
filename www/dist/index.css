@@ -1,0 +1,54 @@
+#bouton_developper {
+    margin: 2em 2em 2em 2em;
+    margin-bottom: 0%;
+}
+
+ul {
+    padding: 0%;
+}
+
+.rectangle,
+.cut_circle,
+.to_delete {
+    margin-bottom: 2em;
+}
+
+button {
+    position: relative;
+    left: 20;
+    bottom: 0;
+}
+
+
+/* * {
+    background: pink;
+    background-size: cover;
+    background-position: fill;
+} */
+
+#menu_deroulant {
+    display: inline-block;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.rectangle img {
+    width: 3em;
+    border: none;
+    margin-left: 3em;
+    margin-top: 3em;
+}
+
+.cut_circle img {
+    width: 3em;
+    border: none;
+    margin-left: 3em;
+    margin-top: 3em;
+}
+
+.to_delete img {
+    width: 3em;
+    border: none;
+    margin-left: 3em;
+    margin-top: 3em;
+}
