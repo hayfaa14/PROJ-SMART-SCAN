@@ -1,0 +1,45 @@
+{
+  "name": "proj-smart-scan",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "sass": "src/index",
+  "main": "src/index",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hayfaa14/PROJ-SMART-SCAN.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hayfaa14/PROJ-SMART-SCAN/issues"
+  },
+  "homepage": "https://github.com/hayfaa14/PROJ-SMART-SCAN#readme",
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/register": "latest",
+    "babel-loader": "latest",
+    "babel-plugin-istanbul": "latest",
+    "browser-sync": "latest",
+    "browser-sync-webpack-plugin": "latest",
+    "css-loader": "latest",
+    "file-loader": "latest",
+    "mini-css-extract-plugin": "latest",
+    "node-sass": "latest",
+    "sass-loader": "latest",
+    "style-loader": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest",
+    "material-design-icons": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "materialize-css": "^1.0.0-rc.2"
+  }
+}
