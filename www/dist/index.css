@@ -6562,3 +6562,17 @@ input[type=range]::-ms-thumb {
     text-align: center;
     margin-top: 1.2rem; } }
 
+.fixed-action-btn {
+  left: 23px;
+  top: 23px; }
+
+.greyproject {
+  background-color: #bcaaa4 !important; }
+
+.greenproject {
+  background-color: #26a69a !important; }
+
+.leftbutton {
+  left: 23px;
+  right: auto; }
+

@@ -1,2 +1,19 @@
-@import '~material-design-icons/iconfont/material-icons.css';
 @import '~materialize-css';
+@import '~material-design-icons/iconfont/material-icons.css';
+.fixed-action-btn {
+    left: 23px;
+    top: 23px;
+}
+
+.greyproject {
+    background-color: #bcaaa4 !important;
+}
+
+.greenproject {
+    background-color: #26a69a !important;
+}
+
+.leftbutton {
+    left: 23px;
+    right: auto;
+}
