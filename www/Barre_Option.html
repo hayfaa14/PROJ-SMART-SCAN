@@ -6,39 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barre Option</title>
-    <link rel="stylesheet" type="text/css" href="dist/index.css">
-    <link type="text/css" rel="stylesheet" href="../node_modules/material-icons/css/material-icons.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css" media="screen,projection" />
-    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.min.css" media="screen,projection">
-    <script type="text/javascript" src="./dist/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./dist/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
     <header>
     </header>
     <main>
-        <section>
-            <button class="btn-floating btn-large waves-effect waves-light greenproject" onfocus="document.getElementById('menu_deroulant').style.display = 'inline';
-            " onblur="document.getElementById('menu_deroulant').style.display = 'none';"><i class="material-icons">add</i></button>
+        <section class="fixed-action-btn">
+            <a class="btn-floating btn-large waves-effect waves-light greenproject" onfocus="document.getElementById('menu_deroulant').style.display = 'inline';
+            " onblur="document.getElementById('menu_deroulant').style.display = 'none';"><i class="material-icons">add</i></a>
             <ul id="menu_deroulant" style="display: none;">
                 <li>
-                    <a href="rectangle_cut.php" class="rectangle" type="button"><img src="img/Rectangle_cut.png"></a>
+                    <a href="rectangle_cut.php" class="btn-floating greyproject rectangle" type="button"><i class="material-icons">crop</i></a>
                 </li>
                 <li>
-                    <a href="cut_circle.php" class="cut_circle" type="button"><img src="img/circle_cut.png"></a>
+                    <a href="cut_circle.php" class="btn-floating greyproject cut_circle" type="button"><i class="material-icons">crop_rotate</i></a>
                 </li>
                 <li>
-                    <a href="to_delete.php" class="to_delete" type="button"><img src="img/CrossCircle.png"></a>
+                    <a href="to_delete.php" class="btn-floating greyproject to_delete" type="button"><i class="material-icons">remove_circle</i></a>
                 </li>
             </ul>
 
         </section>
         <section>
-            <button class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">save</i></button>
+            <a href="Modifications-avant-sauvegarde.html" class="btn-floating btn-large waves-effect waves-light greyproject" type="button"><i class="material-icons">save</i></a>
         </section>
     </main>
     <footer>
     </footer>
+    <script type="text/javascript" src="./dist/index.js"></script>
 </body>
 
 </html>

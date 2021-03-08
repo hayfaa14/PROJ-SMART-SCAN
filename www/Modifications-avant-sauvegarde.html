@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifications avant sauvegarde</title>
+    <link rel="stylesheet" type="text/css" href="./dist/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <section class="fixed-action-btn">
+            <button class="btn-floating btn-large waves-effect waves-light greenproject" onfocus="document.getElementById('menu_deroulant').style.display = 'inline';
+            " onblur="document.getElementById('menu_deroulant').style.display = 'none';"><i class="material-icons">add</i></button>
+            <ul id="menu_deroulant" style="display: none;">
+                <li>
+                    <a href="underline.php" class="btn-floating greyproject underlineButton" type="button"><span class="material-icons">format_underlined</span></a>
+                </li>
+                <li>
+                    <a href="bold.php" class="btn-floating greyproject boldButton" type="button"><span class="material-icons">format_bold</span></a>
+                </li>
+                <li>
+                    <a href="italic.php" class="btn-floating greyproject italicButton" type="button"><span class="material-icons">format_italic</span></a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script type="text/javascript" src="./dist/index.js"></script>
+</body>
+
+</html>
