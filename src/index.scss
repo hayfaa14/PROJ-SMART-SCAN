@@ -1,0 +1,28 @@
+/*@import '~materialize-css/dist/css/materialize.css';*/
+/*@import '~materialize-css/dist/css/materialize.min.css';*/
+@import '~materialize-css';
+@import '~material-design-icons/iconfont/material-icons.css';
+@import 'global.scss';
+@import 'theme.scss';
+@import 'global.scss';
+@import 'sending/sending.scss';
+@import 'ecranPicture/ecranPicture.scss';
+@import 'shared/normalizer.scss';
+
+
+.greyproject{
+    background-color: #bcaaa4 !important;
+  }
+  
+.greenproject{
+    background-color: #26a69a !important;
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
