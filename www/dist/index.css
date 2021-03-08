@@ -6562,9 +6562,12 @@ input[type=range]::-ms-thumb {
     text-align: center;
     margin-top: 1.2rem; } }
 
-.fixed-action-btn {
+.fixed-action-btn.topleftcorner {
   left: 23px;
   top: 23px; }
+
+.savebutton {
+  left: 23px; }
 
 .greyproject {
   background-color: #bcaaa4 !important; }
@@ -6572,7 +6575,12 @@ input[type=range]::-ms-thumb {
 .greenproject {
   background-color: #26a69a !important; }
 
-.leftbutton {
-  left: 23px;
-  right: auto; }
+body {
+  background: url(f51aefc4616e423e0f20d242e49633ef.png);
+  background-position: center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin: 0; }
 
