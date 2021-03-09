@@ -1,45 +1,36 @@
 {
-  "name": "proj-smart-scan",
-  "version": "1.0.0",
-  "scripts": {
-    "start": "npm run dev",
-    "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production"
-  },
-  "sass": "src/index",
-  "main": "src/index",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hayfaa14/PROJ-SMART-SCAN.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hayfaa14/PROJ-SMART-SCAN/issues"
-  },
-  "homepage": "https://github.com/hayfaa14/PROJ-SMART-SCAN#readme",
-  "devDependencies": {
-    "@babel/core": "latest",
-    "@babel/preset-env": "latest",
-    "@babel/register": "latest",
-    "babel-loader": "latest",
-    "babel-plugin-istanbul": "latest",
-    "browser-sync": "latest",
-    "browser-sync-webpack-plugin": "latest",
-    "css-loader": "latest",
-    "file-loader": "latest",
-    "mini-css-extract-plugin": "latest",
-    "node-sass": "latest",
-    "sass-loader": "latest",
-    "style-loader": "latest",
-    "webpack": "latest",
-    "webpack-cli": "latest"
-  },
-  "engines": {
-    "node": ">=10"
-  },
-  "dependencies": {
-    "material-design-icons": "^3.0.1",
-    "materialize-css": "^1.0.0-rc.2"
-  }
+    "name": "PROJ-SMART-SCAN",
+    "version": "0.0.1",
+    "scripts": {
+        "start": "npm run dev",
+        "dev": "webpack --mode development --watch",
+        "build": "webpack --mode production"
+    },
+    "sass": "src/index",
+    "main": "src/index",
+    "devDependencies": {
+        "@babel/core": "^7.13.8",
+        "@babel/preset-env": "^7.13.9",
+        "@babel/register": "^7.13.8",
+        "babel-loader": "^8.2.2",
+        "babel-plugin-istanbul": "^6.0.0",
+        "browser-sync": "^2.26.14",
+        "browser-sync-webpack-plugin": "^2.3.0",
+        "css-loader": "^5.1.1",
+        "file-loader": "^6.2.0",
+        "mini-css-extract-plugin": "^1.3.9",
+        "node-sass": "^5.0.0",
+        "sass-loader": "^11.0.1",
+        "style-loader": "^2.0.0",
+        "webpack": "^5.24.3",
+        "webpack-cli": "^4.5.0"
+    },
+    "engines": {
+        "node": ">=10"
+    },
+    "dependencies": {
+        "material-design-icons": "^3.0.1",
+        "material-icons": "^0.5.4",
+        "materialize-css": "^1.0.0"
+    }
 }
