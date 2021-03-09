@@ -1,5 +1,34 @@
+/*@import '~materialize-css/dist/css/materialize.css';*/
+/*@import '~materialize-css/dist/css/materialize.min.css';*/
 @import '~materialize-css';
 @import '~material-design-icons/iconfont/material-icons.css';
+@import 'global.scss';
+@import 'theme.scss';
+@import 'global.scss';
+@import 'sending/sending.scss';
+@import 'ecranPicture/ecranPicture.scss';
+@import 'shared/normalizer.scss';
+/* Attention - a modifier - hayfaa */
+@import 'CSS/save/save.scss';
+@import 'CSS/shared/normalizer.scss';
+@import 'CSS/shared/themes.scss';
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  .bienvenue{
+    font-size: 3rem; 
+    margin-bottom: 5rem;
+  }
+
+
 .fixed-action-btn.topleftcorner {
     left: 23px;
     top: 23px;
@@ -8,22 +37,4 @@
 .savebutton {
     left: 23px;
     position: relative;
-}
-
-.greyproject {
-    background-color: #bcaaa4 !important;
-}
-
-.greenproject {
-    background-color: #26a69a !important;
-}
-
-body {
-    background: url("./../www/img/pen.png");
-    background-position: center fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    margin: 0
 }
