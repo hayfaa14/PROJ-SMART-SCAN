@@ -6590,10 +6590,13 @@ body {
 
 .btnsending {
   text-transform: none !important;
-  border-radius: 10px; }
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  color: black !important; }
 
 .boutton {
-  background-color: #64d8cd;
+  background-color: #26a69a;
   margin-bottom: 1em;
   border-radius: 10px;
   text-align: center;
@@ -6601,7 +6604,38 @@ body {
   height: 2.5em; }
 
 .gmail {
+  margin-top: 2rem;
   background-image: url(a2f2146f929409405da07c73ea1c8632.png);
+  background-size: 1.5rem;
+  background-position: 1.5rem;
+  background-repeat: no-repeat; }
+
+.drive {
+  background-image: url(821daae1929d42e0441ccca8e5027bd9.png);
+  background-size: 1.5rem;
+  background-position: 1.5rem;
+  background-repeat: no-repeat; }
+
+.faceb {
+  background-image: url(fd30f6224ba7d97a20af8676ed00b1bd.png);
+  background-size: 1.5rem;
+  background-position: 1.5rem;
+  background-repeat: no-repeat; }
+
+.instag {
+  background-image: url(e719d8b29f452a16302dde353806c1fa.png);
+  background-size: 1.5rem;
+  background-position: 1.5rem;
+  background-repeat: no-repeat; }
+
+.linkd {
+  background-image: url(5da81c58f46e7ffb2d52fac8c6599569.png);
+  background-size: 1.5rem;
+  background-position: 1.5rem;
+  background-repeat: no-repeat; }
+
+.what {
+  background-image: url(1dd8ca2765f1f177ab22d9f82d91487b.png);
   background-size: 20px;
   background-position: 15px;
   background-repeat: no-repeat; }
@@ -6652,4 +6686,8 @@ body {
 
 main {
   flex: 1 0 auto; }
+
+.bienvenue {
+  font-size: 3rem;
+  margin-bottom: 5rem; }
 

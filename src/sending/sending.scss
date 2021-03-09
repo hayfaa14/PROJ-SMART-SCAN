@@ -16,10 +16,14 @@ background: none !important;
 }
 .btnsending{
     text-transform: none !important;
+    font-size: 1rem;
     border-radius: 10px;
+    margin-bottom:1rem ;
+    color: black !important;
 }
+
 .boutton {
-    background-color: #64d8cd;
+    background-color: #26a69a;
     margin-bottom:1em ;
     border-radius: 10px;
     text-align: center;
@@ -28,7 +32,39 @@ background: none !important;
 }
 
 .gmail{
+    margin-top: 2rem;
     background-image:url("./../assets/img/gmail.png") ;
+    background-size: 1.5rem;
+    background-position: 1.5rem;
+    background-repeat: no-repeat;
+}
+
+.drive{
+    background-image:url("./../assets/img/google-drive.png") ;
+    background-size: 1.5rem;
+    background-position: 1.5rem;
+    background-repeat: no-repeat;
+}
+.faceb{
+    background-image:url("./../assets/img/facebook.png") ;
+    background-size: 1.5rem;
+    background-position: 1.5rem;
+    background-repeat: no-repeat;
+}
+.instag{
+    background-image:url("./../assets/img/instagram.png") ;
+    background-size: 1.5rem;
+    background-position: 1.5rem;
+    background-repeat: no-repeat;
+}
+.linkd{
+    background-image:url("./../assets/img/linkedin.png") ;
+    background-size: 1.5rem;
+    background-position: 1.5rem;
+    background-repeat: no-repeat;
+}
+.what{
+    background-image:url("./../assets/img/whatsapp (1).png") ;
     background-size: 20px;
     background-position: 15px;
     background-repeat: no-repeat;
