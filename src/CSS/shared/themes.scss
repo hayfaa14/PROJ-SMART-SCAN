@@ -1,0 +1,26 @@
+
+
+    p{
+        line-height: 2em;
+        font-size: 1.5em;
+        color: whitesmoke;
+    }
+
+    .greyproject{
+
+        background-color: #bcaaa4 !important;
+       }
+      
+     .greenproject {
+         
+        background-color: #26a69a !important;
+    }
+
+    .input{
+        color: whitesmoke;
+    }
+
+    [type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+        content: '';
+        border: 2px solid whitesmoke;
+    }

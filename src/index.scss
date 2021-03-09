@@ -8,15 +8,11 @@
 @import 'sending/sending.scss';
 @import 'ecranPicture/ecranPicture.scss';
 @import 'shared/normalizer.scss';
+/* Attention - a modifier - hayfaa */
+@import 'CSS/save/save.scss';
+@import 'CSS/shared/normalizer.scss';
+@import 'CSS/shared/themes.scss';
 
-
-.greyproject{
-    background-color: #bcaaa4 !important;
-  }
-  
-.greenproject{
-    background-color: #26a69a !important;
-  }
   body {
     display: flex;
     min-height: 100vh;
@@ -26,8 +22,8 @@
   main {
     flex: 1 0 auto;
   }
+
   .bienvenue{
     font-size: 3rem; 
     margin-bottom: 5rem;
   }
- 

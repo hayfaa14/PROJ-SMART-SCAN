@@ -1,6 +1,6 @@
 {
-  "name": "html-training",
-  "version": "0.0.1",
+  "name": "proj-smart-scan",
+  "version": "1.0.0",
   "scripts": {
     "start": "npm run dev",
     "dev": "webpack --mode development --watch",
@@ -8,6 +8,16 @@
   },
   "sass": "src/index",
   "main": "src/index",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hayfaa14/PROJ-SMART-SCAN.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hayfaa14/PROJ-SMART-SCAN/issues"
+  },
+  "homepage": "https://github.com/hayfaa14/PROJ-SMART-SCAN#readme",
   "devDependencies": {
     "@babel/core": "latest",
     "@babel/preset-env": "latest",

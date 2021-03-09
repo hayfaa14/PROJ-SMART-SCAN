@@ -48,6 +48,7 @@ module.exports = {
                 'www/index.html',
                 'www/ecranPicture.html',
                 'www/sending.html',
+                'www/save.html',
                 // add other files to watch for hot reload
             ],
             server: {
