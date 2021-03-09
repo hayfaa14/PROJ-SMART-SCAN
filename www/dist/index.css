@@ -6567,7 +6567,8 @@ input[type=range]::-ms-thumb {
   top: 23px; }
 
 .savebutton {
-  left: 23px; }
+  left: 23px;
+  position: relative; }
 
 .greyproject {
   background-color: #bcaaa4 !important; }
