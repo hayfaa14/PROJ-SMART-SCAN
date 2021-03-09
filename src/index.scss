@@ -2,16 +2,12 @@
 /*@import '~materialize-css/dist/css/materialize.min.css';*/
 @import '~materialize-css';
 @import '~material-design-icons/iconfont/material-icons.css';
-@import 'global.scss';
-@import 'theme.scss';
-@import 'global.scss';
+@import 'shared/global.scss';
+@import 'shared/theme.scss';
 @import 'sending/sending.scss';
 @import 'ecranPicture/ecranPicture.scss';
 @import 'shared/normalizer.scss';
-/* Attention - a modifier - hayfaa */
-@import 'CSS/save/save.scss';
-@import 'CSS/shared/normalizer.scss';
-@import 'CSS/shared/themes.scss';
+@import 'save/save.scss';
 
   body {
     display: flex;
@@ -34,7 +30,7 @@
     top: 23px;
 }
 
-.savebutton {
-    left: 23px;
-    position: relative;
-}
+// .savebutton {
+//     left: 23px;
+//     position: relative;
+// }

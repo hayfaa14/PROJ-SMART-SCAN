@@ -49,8 +49,8 @@ module.exports = {
                 'www/ecranPicture.html',
                 'www/sending.html',
                 'www/save.html',
-                'www/Barre_Option.html',
-                'www/Modifications-avant-sauvegarde.html',
+                'www/barreOption.html',
+                'www/formatText.html',
                 // add other files to watch for hot reload
             ],
             server: {
