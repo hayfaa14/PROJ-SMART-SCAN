@@ -1,4 +1,4 @@
-import barreOptionHTML from '../barreOption';
+import barreOptionHTML from '../barreOption/barreOption.html';
 import displayText from '../format/formatText';
 
 export const barreOptionJS = (selector) => {
