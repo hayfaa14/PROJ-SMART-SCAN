@@ -15,9 +15,10 @@ export const barreOptionJS = (selector) => {
                 </li>
             </ul>
     </div>
-    <a href="formatText.js" class="btn-floating btn-large waves-effect waves-light greenproject savebutton" type="button"><i class="material-icons">save</i></a>
+    <a href="save.js" class="btn-floating btn-large waves-effect waves-light greenproject savebutton" type="button"><i class="material-icons">save</i></a>
     </div>
     <br>
+    <a href="formatText.js" class="btn-floating btn-large waves-effect waves-light greenproject" type="button"><i class="material-icons">text_format</i></a>
     `
     var elems = document.querySelectorAll('.fixed-action-btn');
     var instances = M.FloatingActionButton.init(elems, { direction: 'bottom', hoverEnabled: false });
