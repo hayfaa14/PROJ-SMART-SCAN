@@ -1,5 +1,8 @@
 /*@import '~materialize-css/dist/css/materialize.css';*/
+
+
 /*@import '~materialize-css/dist/css/materialize.min.css';*/
+
 @import '~materialize-css';
 @import '~material-design-icons/iconfont/material-icons.css';
 @import 'shared/global.scss';
@@ -8,29 +11,27 @@
 @import 'ecranPicture/ecranPicture.scss';
 @import 'shared/normalizer.scss';
 @import 'save/save.scss';
-
-  body {
+body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }
-
-  .bienvenue{
-    font-size: 3rem; 
-    margin-bottom: 5rem;
-  }
-
-
-.fixed-action-btn.topleftcorner {
-    left: 23px;
-    top: 23px;
 }
 
-// .savebutton {
-//     left: 23px;
-//     position: relative;
-// }
+main {
+    flex: 1 0 auto;
+}
+
+.bienvenue {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+}
+
+.topleftcorner {
+    right: 22.8em;
+    bottom: 47em;
+}
+
+.savebutton {
+    left: 1em;
+    top: 8em;
+}
