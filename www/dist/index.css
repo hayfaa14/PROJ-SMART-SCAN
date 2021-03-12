@@ -6704,6 +6704,11 @@ main {
 .retour {
   left: -23px; }
 
+.topleftcorner {
+  position: relative;
+  right: 12.5em;
+  top: 2.5em; }
+
 body {
   display: flex;
   min-height: 100vh;
@@ -6716,11 +6721,7 @@ main {
   font-size: 3rem;
   margin-bottom: 5rem; }
 
-.topleftcorner {
-  right: 22.8em;
-  bottom: 47em; }
-
 .savebutton {
   left: 1em;
-  top: 8em; }
+  top: 45em; }
 

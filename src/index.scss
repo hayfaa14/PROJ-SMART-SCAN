@@ -11,7 +11,7 @@
 @import 'ecranPicture/ecranPicture.scss';
 @import 'shared/normalizer.scss';
 @import 'save/save.scss';
-@import 'format/barreOption.js';
+@import 'format/barreOption.scss';
 body {
     display: flex;
     min-height: 100vh;
@@ -27,12 +27,7 @@ main {
     margin-bottom: 5rem;
 }
 
-.topleftcorner {
-    right: 22.8em;
-    bottom: 47em;
-}
-
 .savebutton {
     left: 1em;
-    top: 8em;
+    top: 45em;
 }
