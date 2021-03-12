@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"barreOptionJS\": () => (/* binding */ barreOptionJS)\n/* harmony export */ });\nvar barreOptionJS = function barreOptionJS(selector) {\n  var element = document.querySelector(selector);\n  element.innerHTML = \"\\n    <div class=\\\"fixed-action-btn direction-bottom click-to-toggle topleftcorner\\\">\\n        <a class=\\\"btn-floating btn-large waves-effect waves-light greenproject\\\"><i class=\\\"material-icons\\\">add</i></a>\\n            <ul>\\n                <li>\\n                    <a href=\\\"rectangle_cut.php\\\" class=\\\"btn-floating greyproject\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">crop</i></a>\\n                </li>\\n                <li>\\n                    <a href=\\\"cut_circle.php\\\" class=\\\"btn-floating greyproject\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">crop_rotate</i></a>\\n                </li>\\n                <li>\\n                    <a href=\\\"to_delete.php\\\" class=\\\"btn-floating greyproject\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">remove_circle</i></a>\\n                </li>\\n            </ul>\\n    </div>\\n    <a href=\\\"save.js\\\" class=\\\"btn-floating btn-large waves-effect waves-light greenproject savebutton\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">save</i></a>\\n    </div>\\n    <br>\\n    <a href=\\\"formatText.js\\\" class=\\\"btn-floating btn-large waves-effect waves-light greenproject\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">text_format</i></a>\\n    \";\n  var elems = document.querySelectorAll('.fixed-action-btn');\n  var instances = M.FloatingActionButton.init(elems, {\n    direction: 'bottom',\n    hoverEnabled: false\n  });\n};\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/format/barreOption.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"barreOptionJS\": () => (/* binding */ barreOptionJS)\n/* harmony export */ });\n/* harmony import */ var _format_barreOption_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../format/barreOption.html */ \"./src/format/barreOption.html\");\n\nvar barreOptionJS = function barreOptionJS(selector) {\n  var aBarreOpt = document.querySelector('.aBarreOpt');\n  var element = document.querySelector(selector);\n  element.innerHTML = _format_barreOption_html__WEBPACK_IMPORTED_MODULE_0__.default;\n  var elems = document.querySelectorAll('.fixed-action-btn');\n  var instances = M.FloatingActionButton.init(elems, {\n    direction: 'bottom',\n    hoverEnabled: false\n  });\n\n  aBarreOpt.onclick = function () {\n    return false;\n  };\n};\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/format/barreOption.js?");
 
 /***/ }),
 
@@ -70,6 +70,17 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * Ma
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/index.scss?");
+
+/***/ }),
+
+/***/ "./src/format/barreOption.html":
+/*!*************************************!*\
+  !*** ./src/format/barreOption.html ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"<div class=\\\"fixed-action-btn direction-bottom click-to-toggle topleftcorner\\\">\\r\\n    <a class=\\\"btn-floating btn-large waves-effect waves-light greenproject\\\"><i class=\\\"material-icons\\\">add</i></a>\\r\\n    <ul>\\r\\n        <li>\\r\\n            <a class=\\\"btn-floating greyproject\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">crop</i></a>\\r\\n        </li>\\r\\n        <li>\\r\\n            <a class=\\\"btn-floating greyproject\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">crop_rotate</i></a>\\r\\n        </li>\\r\\n        <li>\\r\\n            <a class=\\\"btn-floating greyproject\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">remove_circle</i></a>\\r\\n        </li>\\r\\n    </ul>\\r\\n</div>\\r\\n<a href=\\\"save.js\\\" class=\\\"btn-floating btn-large waves-effect waves-light greenproject savebutton\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">save</i></a>\\r\\n</div>\\r\\n<br>\\r\\n<a href=\\\"formatText.js\\\" class=\\\"btn-floating btn-large waves-effect waves-light greenproject formatbtn\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">text_format</i></a>\");\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/format/barreOption.html?");
 
 /***/ }),
 

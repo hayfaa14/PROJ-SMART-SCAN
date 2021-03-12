@@ -1,10 +1,17 @@
 .topleftcorner {
     position: relative;
-    right: 12.5em;
-    top: 2.5em;
+    top: 1em;
+    left: -22.5em;
 }
 
 .savebutton {
+    position: relative;
     left: 1em;
-    top: 45em;
+    top: 40em;
+}
+
+.formatbtn {
+    position: relative;
+    left: 1em;
+    top: 40em;
 }
