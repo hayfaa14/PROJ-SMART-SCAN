@@ -2,7 +2,7 @@ import 'materialize-css';
 import { Collapsible } from 'materialize-css';
 import 'tesseract.js';
 import { barreOptionJS } from './barreOption/barreOption';
-import { formatTextJS } from './format/formatText';
+import { formatTextJS } from './formatText/formatText';
 
 barreOptionJS("body");
 

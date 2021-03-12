@@ -1,5 +1,7 @@
 import barreOptionHTML from '../barreOption/barreOption.html';
-import displayText from '../format/formatText';
+import { displayText } from '../formatText/formatText';
+// import {displaySave} from '../save/save';
+// import {displayPreview} from '../preview/preview';
 
 export const barreOptionJS = (selector) => {
     const element = document.querySelector(selector);
@@ -10,7 +12,20 @@ export const barreOptionJS = (selector) => {
 
     const aBarreOpt = document.querySelector('#aBarreOpt');
     aBarreOpt.onclick = () => {
-        displayText("body");
+        displayText(selector);
         return false;
     }
+
+    const aSave = document.querySelector('#aSave');
+    aSave.onclick = () => {
+        displaySave(selector);
+        return false;
+    }
+
+    const aReturn = document.querySelector('#aReturnBtn');
+    aReturn.onclick = () => {
+        displayPreview(selector);
+        return false;
+    }
+
 };
