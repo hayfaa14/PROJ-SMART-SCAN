@@ -6676,7 +6676,7 @@ p {
 .footergreen {
   padding: 0 !important; }
 
-.relative {
+.wholebody {
   height: 100vw; }
 
 header {
@@ -6703,6 +6703,11 @@ main {
 
 .retour {
   left: -23px; }
+
+.checkboite {
+  padding: 0%;
+  margin-top: 5em;
+  color: whitesmoke; }
 
 body {
   display: flex;
