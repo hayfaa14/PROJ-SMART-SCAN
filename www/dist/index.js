@@ -9,6 +9,50 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/barreOption/barreOption.js":
+/*!****************************************!*\
+  !*** ./src/barreOption/barreOption.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayBarreOption\": () => (/* binding */ displayBarreOption)\n/* harmony export */ });\n/* harmony import */ var _barreOption_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./barreOption.html */ \"./src/barreOption/barreOption.html\");\n\nvar displayBarreOption = function displayBarreOption(element) {\n  element.innerHTML = _barreOption_html__WEBPACK_IMPORTED_MODULE_0__.default;\n};\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/barreOption/barreOption.js?");
+
+/***/ }),
+
+/***/ "./src/ecranPicture/ecranPicture.js":
+/*!******************************************!*\
+  !*** ./src/ecranPicture/ecranPicture.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayEcranPicture\": () => (/* binding */ displayEcranPicture)\n/* harmony export */ });\n/* harmony import */ var _ecranPicture_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ecranPicture.html */ \"./src/ecranPicture/ecranPicture.html\");\n/* harmony import */ var _save_save__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../save/save */ \"./src/save/save.js\");\n\n\nvar displayEcranPicture = function displayEcranPicture(element) {\n  element.innerHTML = _ecranPicture_html__WEBPACK_IMPORTED_MODULE_0__.default;\n  var pictureDone = document.querySelector(\"#Save\");\n\n  pictureDone.onclick = function () {\n    (0,_save_save__WEBPACK_IMPORTED_MODULE_1__.displaySave)(document.body);\n    return false;\n  };\n};\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/ecranPicture/ecranPicture.js?");
+
+/***/ }),
+
+/***/ "./src/formatText/formatText.js":
+/*!**************************************!*\
+  !*** ./src/formatText/formatText.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayFormatText\": () => (/* binding */ displayFormatText)\n/* harmony export */ });\n/* harmony import */ var _formatText_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./formatText.html */ \"./src/formatText/formatText.html\");\n\nvar displayFormatText = function displayFormatText(element) {\n  element.innerHTML = _formatText_html__WEBPACK_IMPORTED_MODULE_0__.default;\n};\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/formatText/formatText.js?");
+
+/***/ }),
+
+/***/ "./src/home/home.js":
+/*!**************************!*\
+  !*** ./src/home/home.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displayHome\": () => (/* binding */ displayHome)\n/* harmony export */ });\n/* harmony import */ var _ecranPicture_ecranPicture__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ecranPicture/ecranPicture */ \"./src/ecranPicture/ecranPicture.js\");\n/* harmony import */ var _home_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.html */ \"./src/home/home.html\");\n\n\nvar displayHome = function displayHome(element) {\n  element.innerHTML = _home_html__WEBPACK_IMPORTED_MODULE_1__.default;\n  var linkStart = document.querySelector(\"#Picture\");\n\n  linkStart.onclick = function () {\n    (0,_ecranPicture_ecranPicture__WEBPACK_IMPORTED_MODULE_0__.displayEcranPicture)(document.body);\n    return false;\n  };\n};\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/home/home.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -16,7 +60,29 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! materialize-css */ \"./node_modules/materialize-css/dist/js/materialize.js\");\n/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(materialize_css__WEBPACK_IMPORTED_MODULE_0__);\n\nvar elems = document.querySelectorAll('.fixed-action-btn');\nvar instances = M.FloatingActionButton.init(elems, {\n  direction: 'bottom',\n  hoverEnabled: false\n});\nM.Sidenav.init(document.querySelectorAll('.sidenav')); // M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'));\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! materialize-css */ \"./node_modules/materialize-css/dist/js/materialize.js\");\n/* harmony import */ var materialize_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(materialize_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _barreOption_barreOption__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./barreOption/barreOption */ \"./src/barreOption/barreOption.js\");\n/* harmony import */ var _ecranPicture_ecranPicture__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ecranPicture/ecranPicture */ \"./src/ecranPicture/ecranPicture.js\");\n/* harmony import */ var _formatText_formatText__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./formatText/formatText */ \"./src/formatText/formatText.js\");\n/* harmony import */ var _home_home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./home/home */ \"./src/home/home.js\");\n/* harmony import */ var _save_save__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./save/save */ \"./src/save/save.js\");\n/* harmony import */ var _sending_sending__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sending/sending */ \"./src/sending/sending.js\");\n\n\n\n\n\n\n\nvar elems = document.querySelectorAll('.fixed-action-btn');\nvar instances = M.FloatingActionButton.init(elems, {\n  direction: 'bottom',\n  hoverEnabled: false\n});\nM.Sidenav.init(document.querySelectorAll('.sidenav')); // M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'));*/ \n\n(0,_home_home__WEBPACK_IMPORTED_MODULE_4__.displayHome)(document.body);\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/save/save.js":
+/*!**************************!*\
+  !*** ./src/save/save.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displaySave\": () => (/* binding */ displaySave)\n/* harmony export */ });\n/* harmony import */ var _save_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./save.html */ \"./src/save/save.html\");\n\nvar displaySave = function displaySave(element) {\n  element.innerHTML = _save_html__WEBPACK_IMPORTED_MODULE_0__.default;\n};\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/save/save.js?");
+
+/***/ }),
+
+/***/ "./src/sending/sending.js":
+/*!********************************!*\
+  !*** ./src/sending/sending.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"displaySending\": () => (/* binding */ displaySending)\n/* harmony export */ });\n/* harmony import */ var _sending_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sending.html */ \"./src/sending/sending.html\");\n/* harmony import */ var _save_save__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../save/save */ \"./src/save/save.js\");\n\n\nvar displaySending = function displaySending(element) {\n  element.innerHTML = _sending_html__WEBPACK_IMPORTED_MODULE_0__.default;\n  var pictureDone = document.querySelector(\"#Save\");\n\n  pictureDone.onclick = function () {\n    (0,_save_save__WEBPACK_IMPORTED_MODULE_1__.displaySave)(document.body);\n    return false;\n  };\n};\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/sending/sending.js?");
 
 /***/ }),
 
@@ -38,6 +104,72 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * Ma
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/index.scss?");
+
+/***/ }),
+
+/***/ "./src/barreOption/barreOption.html":
+/*!******************************************!*\
+  !*** ./src/barreOption/barreOption.html ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"    <main>\\r\\n        <div class=\\\"fixed-action-btn topleftcorner direction-bottom click-to-toggle\\\" style=\\\"position: relative ; width: 60px;\\\">\\r\\n            <a class=\\\"btn-floating btn-large waves-effect waves-light greenproject\\\"><i class=\\\"material-icons\\\">add</i></a>\\r\\n            <ul>\\r\\n                <li>\\r\\n                    <a href=\\\"rectangle_cut.php\\\" class=\\\"btn-floating greyproject\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">crop</i></a>\\r\\n                </li>\\r\\n                <li>\\r\\n                    <a href=\\\"cut_circle.php\\\" class=\\\"btn-floating greyproject\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">crop_rotate</i></a>\\r\\n                </li>\\r\\n                <li>\\r\\n                    <a href=\\\"to_delete.php\\\" class=\\\"btn-floating greyproject\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">remove_circle</i></a>\\r\\n                </li>\\r\\n            </ul>\\r\\n        </div>\\r\\n        <ul><a href=\\\"formatText.html\\\" class=\\\"btn-floating btn-large waves-effect waves-light greenproject savebutton\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">save</i></a></ul>\\r\\n        <br>\\r\\n        <!-- <div><a href=\\\"Modifications-avant-sauvegarde.html\\\" class=\\\"btn-floating btn-large waves-effect waves-light greenproject savebutton\\\" type=\\\"button\\\"><i class=\\\"material-icons\\\">save</i></a></div> -->\\r\\n    </main>\\r\\n\");\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/barreOption/barreOption.html?");
+
+/***/ }),
+
+/***/ "./src/ecranPicture/ecranPicture.html":
+/*!********************************************!*\
+  !*** ./src/ecranPicture/ecranPicture.html ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"<main class=\\\"container\\\">\\r\\n  <!-- <video autoplay></video>\\r\\n\\r\\n  <script>\\r\\n    const constraints = {\\r\\n      video: true,\\r\\n    };\\r\\n\\r\\n    const video = document.querySelector(\\\"video\\\");\\r\\n\\r\\n    navigator.mediaDevices.getUserMedia(constraints).then((stream) => {\\r\\n      video.srcObject = stream;\\r\\n    });\\r\\n  </script> -->\\r\\n\\r\\n  <div class=\\\"cadre offset-s6\\\">\\r\\n    <p></p>\\r\\n  </div>\\r\\n</main>\\r\\n\\r\\n<footer class=\\\"page-footer greenproject footergreen\\\">\\r\\n  <div class=\\\"footer-copyright\\\">\\r\\n    <div class=\\\"container\\\">\\r\\n      <a class=\\\"btn-floating btn-large waves-effect waves-light greenproject clic offset-s6 \\\" id=\\\"Save\\\"></a>\\r\\n    </div>\\r\\n  </div>\\r\\n</footer>\");\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/ecranPicture/ecranPicture.html?");
+
+/***/ }),
+
+/***/ "./src/formatText/formatText.html":
+/*!****************************************!*\
+  !*** ./src/formatText/formatText.html ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"<main>\\r\\n    <div class=\\\"fixed-action-btn topleftcorner direction-bottom click-to-toggle\\\"\\r\\n        style=\\\"position: relative ; width: 60px;\\\">\\r\\n        <button class=\\\"btn-floating btn-large waves-effect waves-light greenproject\\\"><i\\r\\n                class=\\\"material-icons\\\">add</i></button>\\r\\n        <ul>\\r\\n            <li>\\r\\n                <a href=\\\"underline.php\\\" class=\\\"btn-floating greyproject underlineButton\\\" type=\\\"button\\\"><i\\r\\n                        class=\\\"material-icons\\\">format_underlined</i></a>\\r\\n            </li>\\r\\n            <li>\\r\\n                <a href=\\\"bold.php\\\" class=\\\"btn-floating greyproject boldButton\\\" type=\\\"button\\\"><i\\r\\n                        class=\\\"material-icons\\\">format_bold</i></a>\\r\\n            </li>\\r\\n            <li>\\r\\n                <a href=\\\"italic.php\\\" class=\\\"btn-floating greyproject italicButton\\\" type=\\\"button\\\"><i\\r\\n                        class=\\\"material-icons\\\">format_italic</i></a>\\r\\n            </li>\\r\\n            <li>\\r\\n                <a href=\\\"bordercolor.php\\\" class=\\\"btn-floating greyproject bordercolor\\\" type=\\\"button\\\"><i\\r\\n                        class=\\\"material-icons\\\">border_color</i></a>\\r\\n            </li>\\r\\n        </ul>\\r\\n    </div>\\r\\n</main>\");\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/formatText/formatText.html?");
+
+/***/ }),
+
+/***/ "./src/home/home.html":
+/*!****************************!*\
+  !*** ./src/home/home.html ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"\\r\\n  <header>\\r\\n    <nav>\\r\\n      <div class=\\\"nav-wrapper greenproject \\\">\\r\\n        <a href=\\\"#\\\" class=\\\"center black-text\\\">Smart Scan </a>\\r\\n      </div>\\r\\n    </nav>\\r\\n  </header>\\r\\n\\r\\n  <main>\\r\\n    <div>\\r\\n      <h1 class=\\\"bienvenue\\\">Bienvenue sur Smart-Scan</h1>\\r\\n    </div>\\r\\n    <div>\\r\\n    <button class=\\\"btn waves-effect waves-light btnsending col s4 offset-s4\\\" type=\\\"submit\\\" name=\\\"action\\\">\\r\\n      <a class=\\\"black-text\\\" id=\\\"Picture\\\">Commencer</a>\\r\\n      <i class=\\\"material-icons right\\\">send</i>\\r\\n    </button>\\r\\n  </div>\\r\\n  <!-- <video autoplay></video> -->\\r\\n  <!-- <div id=\\\"container\\\">\\r\\n    <video autoplay=\\\"true\\\" id=\\\"videoElement\\\"></video>\\r\\n    </div> --> \\r\\n  </main>\\r\\n\\r\\n  <footer class=\\\"page-footer greenproject footergreen\\\">\\r\\n    <div class=\\\"footer-copyright\\\">\\r\\n      <div class=\\\"container black-text\\\">\\r\\n        © 2021 Copyright Text\\r\\n      </div>\\r\\n    </div>\\r\\n  </footer>\\r\\n  <!-- <script>\\r\\n    varvideo = document.querySelector(\\\"#videoElement\\\");\\r\\n \\r\\nif (navigator.mediaDevices.getUserMedia) {​​​​​​​​\\r\\nnavigator.mediaDevices.getUserMedia({​​​​​​​​ video:true }​​​​​​​​)\\r\\n .then(function (stream) {​​​​​​​​\\r\\nvideo.srcObject = stream;\\r\\n }​​​​​​​​)\\r\\n .catch(function (err0r) {​​​​​​​​\\r\\nconsole.log(\\\"Something went wrong!\\\");\\r\\n }​​​​​​​​);\\r\\n}​​​​​​​​\\r\\n    // const constraints = {video: true, };\\r\\n    \\r\\n    // const video = document.querySelector(\\\"video\\\");\\r\\n    // navigator.mediaDevices.getUserMedia(constraints).then((stream) => {\\r\\n    //   video.srcObject = stream; });\\r\\n    </script> -->\\r\\n\");\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/home/home.html?");
+
+/***/ }),
+
+/***/ "./src/save/save.html":
+/*!****************************!*\
+  !*** ./src/save/save.html ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\"    <header>\\r\\n        <h1> Save my scan </h1>\\r\\n\\r\\n    </header>\\r\\n\\r\\n    <main>\\r\\n        <form action=\\\"#\\\">\\r\\n            <p>\\r\\n                <label>\\r\\n                    <input type=\\\"checkbox\\\" id=\\\"share\\\" />\\r\\n                    <span>Share</span>\\r\\n                </label>\\r\\n            </p>\\r\\n        </form>\\r\\n        <form action=\\\"#\\\">\\r\\n            <p>\\r\\n                <label>\\r\\n                    <input type=\\\"checkbox\\\" id=\\\"save\\\" />\\r\\n                    <span>Save to My Files</span>\\r\\n                </label>\\r\\n            </p>\\r\\n        </form>\\r\\n\\r\\n        <form action=\\\"\\\" class=\\\"container\\\">\\r\\n            <p>Choose saving format</p>\\r\\n\\r\\n            <div class=\\\"row\\\">\\r\\n                <div id=\\\"pdf\\\" class=\\\"waves-effect waves-light btn col s6 offset-s3\\\"><i\\r\\n                        class=\\\"material-icons left\\\">picture_as_pdf</i>Save </div>\\r\\n            </div>\\r\\n            <div class=\\\"row\\\">\\r\\n                <div id=\\\"pdf\\\" class=\\\"waves-effect waves-light btn col s6 offset-s3\\\"><i\\r\\n                        class=\\\"material-icons left\\\">picture_as_pdf</i>Save </div>\\r\\n            </div>\\r\\n            <div class=\\\"row\\\">\\r\\n                <div id=\\\"pdf\\\" class=\\\"waves-effect waves-light btn col s6 offset-s3\\\"><i\\r\\n                        class=\\\"material-icons left\\\">picture_as_pdf</i>Save </div>\\r\\n            </div>\\r\\n            <div class=\\\"row\\\">\\r\\n                <div id=\\\"pdf\\\" class=\\\"waves-effect waves-light btn col s6 offset-s3\\\"><i\\r\\n                        class=\\\"material-icons left\\\">picture_as_pdf</i>Save </div>\\r\\n            </div>\\r\\n\\r\\n            </div>\\r\\n        </form>\\r\\n\\r\\n    </main>\\r\\n\\r\\n    <footer>\\r\\n        <form action=\\\"\\\" method=\\\"get\\\">\\r\\n            <div class=\\\"fixed-action-btn retour\\\">\\r\\n                <a class=\\\"btn-floating btn-large greenproject\\\">\\r\\n                    <i class=\\\"large material-icons\\\">keyboard_return</i>\\r\\n                </a>\\r\\n            </div>\\r\\n        </form>\\r\\n    </footer>\");\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/save/save.html?");
+
+/***/ }),
+
+/***/ "./src/sending/sending.html":
+/*!**********************************!*\
+  !*** ./src/sending/sending.html ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (\" <header>\\r\\n    <nav>\\r\\n      <div class=\\\"nav-wrapper greenproject \\\">\\r\\n        <a href=\\\"#\\\" class=\\\"center black-text\\\">Partager Votre Fichier <span class=\\\"material-icons share\\\">share</span></a>\\r\\n      </div>\\r\\n    </nav>\\r\\n  </header>\\r\\n\\r\\n  <main class=\\\"container\\\">\\r\\n    <div class=\\\"row\\\">\\r\\n      <div class=\\\"waves-effect waves-light btn col s4 offset-s4 btnsending gmail\\\">Gmail</div>\\r\\n      <div class=\\\"waves-effect waves-light btn col s4 offset-s4 btnsending drive\\\">One Drive</div>\\r\\n      <div class=\\\"waves-effect waves-light btn col s4 offset-s4 btnsending faceb\\\">Facebook</div>\\r\\n      <div class=\\\"waves-effect waves-light btn col s4 offset-s4 btnsending instag\\\">Instagram</div>\\r\\n      <div class=\\\"waves-effect waves-light btn col s4 offset-s4 btnsending linkd\\\">LinkedIn</div>\\r\\n      <div class=\\\"waves-effect waves-light btn col s4 offset-s4 btnsending what\\\">WhatsApp</div>\\r\\n    </div>\\r\\n    <!-- <button class=\\\"boutton gmail\\\"> Gmail</button></br>\\r\\n    <button class=\\\"boutton drive\\\"> One Drive</button></br>\\r\\n    <button class=\\\"boutton faceb\\\"> Facebook</button></br>\\r\\n    <button class=\\\"boutton instag\\\"> Instagram</button></br>\\r\\n    <button class=\\\"boutton linkd\\\"> LinkedIn</button></br>\\r\\n    <button class=\\\"boutton what\\\"> WhatsApp</button></br> -->\\r\\n  </main>\\r\\n\\r\\n  <footer class=\\\"page-footer footergreen\\\">\\r\\n    <div class=\\\"container\\\">\\r\\n      <a class=\\\"btn-floating btn-large waves-effect waves-light greenproject offset-s6 return\\\" id=\\\"Save\\\">\\r\\n        <i class=\\\"material-icons\\\">keyboard_return</i></a>\\r\\n    </div>\\r\\n    <div class=\\\"footer-copyright\\\">\\r\\n      <div class=\\\"container black-text\\\">\\r\\n        © 2021 Copyright Text\\r\\n      </div>\\r\\n    </div>\\r\\n  </footer>\");\n\n//# sourceURL=webpack://PROJ-SMART-SCAN/./src/sending/sending.html?");
 
 /***/ })
 
