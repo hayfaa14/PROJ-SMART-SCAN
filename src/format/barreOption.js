@@ -1,5 +1,5 @@
 import barreOptionHTML from '../format/barreOption.html';
-import formatTextJS from '../format/formatTexte'
+import displayText from './formatText/formatText'
 
 
 export const barreOptionJS = (selector) => {
@@ -9,7 +9,7 @@ export const barreOptionJS = (selector) => {
     var elems = document.querySelectorAll('.fixed-action-btn');
     var instances = M.FloatingActionButton.init(elems, { direction: 'bottom', hoverEnabled: false });
     aBarreOpt.onclick = () => {
-        formatTextJS("body");
+        displayText("body");
         return false;
     }
 };
