@@ -1,4 +1,7 @@
 import 'materialize-css';
+import 'tesseract.js';
+import { barreOptionJS } from './barreOption/barreOption';
+import { formatTextJS } from './formatText/formatText';
 import { displaySave } from './save/save';
 import {displaySend} from './sending/sending'
 import {displayEcranPicture} from './ecranPicture/ecranPicture'
@@ -7,7 +10,6 @@ import {tryingEvent} from './save/example'
 import {displayHome} from './home/home'
 import {displayPreview} from './preview/preview'
 
-
 // Materialize guidelines
 
 var elems = document.querySelectorAll('.fixed-action-btn');
@@ -15,17 +17,9 @@ var instances = M.FloatingActionButton.init(elems, { direction: 'bottom', hoverE
 M.Sidenav.init(document.querySelectorAll('.sidenav'));
 
 // Materialize guidelines
-
 const placeBody="body";
-// const placeFooter="footer";
-
-//  displayEcranPicture(placeBody);
-//   displaySave(placeBody);
-// displayFooter(placeBody);
-// displaySend(pos);
-// displaySave(placeBody);
 
 displayHome(placeBody);
+ 
 
-// displaySend(placeBody);
 

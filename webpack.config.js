@@ -11,7 +11,10 @@ module.exports = {
         filename: 'index.js',
     },
     module: {
-        rules: [
+        rules: [{
+                test: /\.html$/i,
+                use: 'raw-loader',
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -44,8 +47,8 @@ module.exports = {
         ],
     },
     plugins: [
-        new MiniCssExtractPlugin({ 
-            filename: 'index.css' 
+        new MiniCssExtractPlugin({
+            filename: 'index.css'
         }),
         new BrowserSyncPlugin({
             host: 'localhost',
@@ -61,9 +64,9 @@ module.exports = {
             ],
             server: {
                 baseDir: 'www',
-                middleware: (req, res, next) => (-1 === req.url.indexOf('.') && '/' !== req.url
-                    ? res.end(res.writeHead(302, { Location: '/' }))
-                    : next()),
+                middleware: (req, res, next) => (-1 === req.url.indexOf('.') && '/' !== req.url ?
+                    res.end(res.writeHead(302, { Location: '/' })) :
+                    next()),
             },
         }),
     ],
