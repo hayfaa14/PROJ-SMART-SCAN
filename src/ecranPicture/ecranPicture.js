@@ -9,5 +9,4 @@ export const displayEcranPicture= (element) =>{
         displaySave(document.body);
         return false;
     }
-    
 }
