@@ -1,5 +1,5 @@
 import 'materialize-css';
-import 'tesseract.js';
+// import 'tesseract.js';
 import { barreOptionJS } from './barreOption/barreOption';
 import { formatTextJS } from './formatText/formatText';
 import { displaySave } from './save/save';
@@ -12,9 +12,9 @@ import {displayPreview} from './preview/preview'
 
 // Materialize guidelines
 
-var elems = document.querySelectorAll('.fixed-action-btn');
-var instances = M.FloatingActionButton.init(elems, { direction: 'bottom', hoverEnabled: false });
-M.Sidenav.init(document.querySelectorAll('.sidenav'));
+// var elems = document.querySelectorAll('.fixed-action-btn');
+// var instances = M.FloatingActionButton.init(elems, { direction: 'bottom', hoverEnabled: false });
+// M.Sidenav.init(document.querySelectorAll('.sidenav'));
 
 // Materialize guidelines
 const placeBody="body";

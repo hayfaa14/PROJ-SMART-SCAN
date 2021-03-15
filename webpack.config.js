@@ -12,7 +12,8 @@ module.exports = {
     },
     module: {
         rules: [{
-                test: /\.html$/i,
+                test: /\.html$/,
+                exclude: /node_modules/,
                 use: 'raw-loader',
             },
             {
@@ -29,11 +30,6 @@ module.exports = {
                     'sass-loader',
                 ],
             },
-            {
-                test: /\.html$/,
-                exclude: /node_modules/,
-                use: 'raw-loader',
-              },
             {
                 test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
                 loader: 'file-loader',
