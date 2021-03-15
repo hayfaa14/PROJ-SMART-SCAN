@@ -1,20 +1,18 @@
-.cadre {
+.cadre,
+#video {
     height: 70vh;
     width: 70vw;
     border: 3px solid #00766c;
     border-radius: 10px;
-    position:fixed;
+    position: fixed;
     bottom: 20vh;
-    left:15vw
+    left: 15vw
 }
 
-    
-.clic{
+.clic {
     border: black solid 6px !important;
 }
 
-.footergreen{
-padding:0 !important;
+.footergreen {
+    padding: 0 !important;
 }
-
-
