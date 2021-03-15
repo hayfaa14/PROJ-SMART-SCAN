@@ -12,10 +12,11 @@ export const displaySave = (selector) => {
          e.preventDefault;
          displayEcranPicture(selector);
     }
-     const myBoxShare = document.querySelector('#share')
-     myBoxShare.onclick = (e) => {
-         e.preventDefault
-         displaySend(selector);
-     }
+    //  const myBoxShare = document.querySelector('#share')
+    //  myBoxShare.onclick = (e) => {
+    //      e.preventDefault
+    //      return True // rectify
+    // const 
+    //  }
 };
 

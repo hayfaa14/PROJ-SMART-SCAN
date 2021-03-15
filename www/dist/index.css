@@ -6709,6 +6709,38 @@ main {
   margin-top: 5em;
   color: whitesmoke; }
 
+.btnsaving {
+  text-transform: none !important;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  color: black !important; }
+
+.pdfpdf {
+  margin-top: 2rem;
+  background-image: url(8a459983df22b8d5ea6b2cd743201fec.png);
+  background-size: 1.5rem;
+  background-position: 1.5rem;
+  background-repeat: no-repeat; }
+
+.word {
+  background-image: url(dda7dbf27394665ca5141c6362f2b3c5.png);
+  background-size: 1.5rem;
+  background-position: 1.5rem;
+  background-repeat: no-repeat; }
+
+.editSaveContainer {
+  margin-left: 80%;
+  margin-top: 10%;
+  margin-bottom: 10%; }
+
+.saveEditGap {
+  margin-bottom: 300%; }
+
+.myScan {
+  bottom: 7em;
+  right: 20%; }
+
 body {
   display: flex;
   min-height: 100vh;

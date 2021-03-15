@@ -5,6 +5,7 @@ import {displayEcranPicture} from './ecranPicture/ecranPicture'
 import {displayFooter} from './foot/footer'
 import {tryingEvent} from './save/example'
 import {displayHome} from './home/home'
+import {displayPreview} from './preview/preview'
 
 
 // Materialize guidelines
@@ -22,6 +23,9 @@ const placeBody="body";
 //   displaySave(placeBody);
 // displayFooter(placeBody);
 // displaySend(pos);
-displaySave(placeBody);
+// displaySave(placeBody);
+
+displayHome(placeBody);
+
 // displaySend(placeBody);
 
