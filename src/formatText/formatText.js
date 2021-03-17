@@ -1,7 +1,9 @@
 import formatTextHTML from '../formatText/formatText.html'
-// import {displaySave} from '../save/save'
+import { displaySave } from '../save/save';
+import { displayPreview } from '../preview/preview';
+import { displayBarreOption } from '../barreOption/barreOption'
 
-export const displayText = (selector) => {
+export const displayText = (selector, screenShot) => {
     const element = document.querySelector(selector);
     element.innerHTML = formatTextHTML;
 
@@ -10,7 +12,12 @@ export const displayText = (selector) => {
 
     const aSave = document.querySelector('#aSave');
     aSave.onclick = () => {
-        displaySave(selector);
+        displaySave(selector, screenShot);
+        return false;
+    }
+    const aReturn = document.querySelector('#aReturnBtn');
+    aReturn.onclick = () => {
+        displayBarreOption(selector, screenShot);
         return false;
     }
 };

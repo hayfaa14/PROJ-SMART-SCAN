@@ -1,17 +1,12 @@
-import { barreOptionJS } from '../barreOption/barreOption';
 import { displayPreview } from '../preview/preview';
 import template from './ecranPicture.html'
+
 export const displayEcranPicture = (selector) => {
 
     var ecranPicturePage = document.querySelector(selector);
     ecranPicturePage.innerHTML = template;
-    // const btnAppear = document.querySelector(".clic");
     var constraints = { audio: false, video: true };
-    var cadre = document.querySelector(".cadre");
     var saveBtn = document.querySelector("#Save");
-    var width = 300;
-    var height = 0;
-    var streaming = false;
     var video = document.querySelector("#video");
     var canvas = document.createElement('canvas');
     var monScan = document.querySelector(".monscan");
@@ -19,8 +14,6 @@ export const displayEcranPicture = (selector) => {
     function takepicture() {
         canvas.width = video.offsetWidth;
         canvas.height = video.offsetHeight;
-        console.log(canvas.width);
-        console.log(canvas.height);
         monScan.appendChild(canvas);
         canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
         var data = canvas.toDataURL();
@@ -40,10 +33,9 @@ export const displayEcranPicture = (selector) => {
             console.log("srcObject")
             video.srcObject = stream;
         } else {
-            console.log("createObjectUrl")
+            console.log("createObjectUrl");
             video.src = window.URL.createObjectURL(stream);
         }
-        console.log("over");
     }).catch(
         (err) => {
             console.log("Veuillez accepter l'utilisation de votre caméra pour profiter de l'application");

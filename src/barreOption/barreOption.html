@@ -1,11 +1,8 @@
 <div class="fixed-action-btn direction-bottom click-to-toggle topleftcorner">
-    <button class="btn-floating btn-large waves-effect waves-light greenproject"><i class="material-icons">add</i></button>
+    <button class="btn-floating btn-large waves-effect waves-light greenproject btn btn-success"><i class="material-icons">add</i></button>
     <ul>
         <li>
-            <a class="btn-floating greyproject" type="button"><i class="material-icons">crop</i></a>
-        </li>
-        <li>
-            <a class="btn-floating greyproject" type="button"><i class="material-icons">crop_rotate</i></a>
+            <a class="btn-floating greyproject" type="button" id="cropBtn"><i class="material-icons">Crop</i></a>
         </li>
         <li>
             <a class="btn-floating greyproject" type="button"><i class="material-icons">remove_circle</i></a>
@@ -14,5 +11,9 @@
 </div>
 <a class="btn-floating btn-large waves-effect waves-light greenproject savebutton" type="button" id="aSave"><i class="material-icons">save</i></a>
 </div>
+<div class="cadre">
+    <img class="myScan" id="imgToCrop">
+</div>
+<div id="cropped_result"></div>
 <a class="btn-floating btn-large waves-effect waves-light greenproject formatbtn" type="button" id="aBarreOpt"><i class="material-icons">text_format</i></a>
 <a class="btn-floating btn-large waves-effect waves-light greenproject returnbtn" type="button" id="aReturnBtn"><i class="material-icons">keyboard_return</i></a>

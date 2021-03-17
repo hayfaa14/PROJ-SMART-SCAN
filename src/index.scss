@@ -3,6 +3,7 @@
 
 /*@import '~materialize-css/dist/css/materialize.min.css';*/
 
+@import '~cropperjs';
 @import '~materialize-css';
 @import '~material-design-icons/iconfont/material-icons.css';
 @import 'shared/global.scss';
@@ -14,7 +15,6 @@
 @import 'preview/preview.scss';
 @import 'barreOption/barreOption.scss';
 body {
-
     display: flex;
     min-height: 100vh;
     flex-direction: column;
