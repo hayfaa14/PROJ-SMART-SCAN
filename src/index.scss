@@ -11,9 +11,10 @@
 @import 'sending/sending.scss';
 @import 'ecranPicture/ecranPicture.scss';
 @import 'shared/normalizer.scss';
-@import 'save/save.scss';
-@import 'preview/preview.scss';
-@import 'barreOption/barreOption.scss';
+@import 'save/save.component.scss';
+@import 'preview/preview.component.scss';
+@import 'edit/edit.component.scss';
+@import 'formatText/format-text.component.scss';
 body {
     display: flex;
     min-height: 100vh;

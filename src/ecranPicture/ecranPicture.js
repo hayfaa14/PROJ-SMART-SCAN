@@ -1,4 +1,4 @@
-import { displayPreview } from '../preview/preview';
+import { displayPreview } from '../preview/preview.component';
 import template from './ecranPicture.html'
 
 export const displayEcranPicture = (selector) => {
