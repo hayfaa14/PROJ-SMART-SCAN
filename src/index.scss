@@ -1,18 +1,17 @@
 /*@import '~materialize-css/dist/css/materialize.css';*/
-
-
 /*@import '~materialize-css/dist/css/materialize.min.css';*/
 
 @import '~materialize-css';
 @import '~material-design-icons/iconfont/material-icons.css';
 @import 'shared/global.scss';
 @import 'shared/theme.scss';
-@import 'sending/sending.scss';
-@import 'ecranPicture/ecranPicture.scss';
+@import 'sending/sending.component.scss';
+@import 'takePicture/take-picture.component.scss';
 @import 'shared/normalizer.scss';
-@import 'save/save.scss';
-@import 'preview/preview.scss';
-@import 'barreOption/barreOption.scss';
+@import 'save/save.component.scss';
+@import 'preview/preview.component.scss';
+@import 'edit/edit.component.scss';
+
 body {
 
     display: flex;
