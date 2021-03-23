@@ -1,0 +1,26 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.hayfaa.smartscan"
+    },
+    "cordova-plugin-media": {
+      "PACKAGE_NAME": "io.hayfaa.smartscan"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "io.hayfaa.smartscan"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "io.hayfaa.smartscan"
+    }
+  }
+}

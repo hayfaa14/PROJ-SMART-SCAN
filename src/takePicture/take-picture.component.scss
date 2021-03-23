@@ -1,0 +1,28 @@
+.cadre {
+    height: 70vh;
+    width: 70vw;
+    border: 3px solid #00766c;
+    border-radius: 10px;
+    position:fixed;
+    bottom: 20vh;
+    left:15vw
+}
+
+    
+.clic{
+    border: black solid 6px !important;
+}
+
+.footergreen{
+padding:0 !important;
+}
+
+.videoPlay{
+
+    height: 50;
+    width: 50;
+}
+
+#canvas{
+    display: none;
+}
