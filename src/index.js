@@ -20,7 +20,7 @@ import { SaveComponent } from './save/save.component';
 const placeBody = "body";
 
 // displayHome(placeBody);
-const screenShot = "https://raw.githubusercontent.com/seeren-training/Agile/master/wiki/resources/03/12-Refactoring.png";
+const screenShot = "./../assets/img/pen.png";
 const displayEdit = new EditComponent();
 const displaySave = new SaveComponent();
 displayEdit.display(placeBody, screenShot);
