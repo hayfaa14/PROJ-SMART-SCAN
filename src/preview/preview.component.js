@@ -1,7 +1,7 @@
 import { displayBarreOption } from '../edit/edit.component';
 import { displayEcranPicture } from '../ecranPicture/ecranPicture';
 import { displaySave } from '../save/save.component';
-import { displaySend } from '../sending/sending';
+import { displaySend } from '../sending/sending.component';
 import previewHTML from './preview.component.html'
 
 export class Preview {

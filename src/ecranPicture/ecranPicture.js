@@ -24,16 +24,13 @@ export const displayEcranPicture = (selector) => {
     }
 
     navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
-        console.log("play");
         video.onloadedmetadata = () => video.play();
         saveBtn.addEventListener('click', () => {
             takepicture();
         }, false);
         if ('srcObject' in video) {
-            console.log("srcObject")
             video.srcObject = stream;
         } else {
-            console.log("createObjectUrl");
             video.src = window.URL.createObjectURL(stream);
         }
     }).catch(

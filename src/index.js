@@ -1,5 +1,6 @@
 import 'materialize-css';
 import { EditComponent } from './edit/edit.component'
+import { SaveComponent } from './save/save.component';
 // import { barreOptionJS } from './barreOption/barreOption';
 // import { formatTextJS } from './formatText/formatText';
 // import { displaySave } from './save/save';
@@ -21,4 +22,5 @@ const placeBody = "body";
 // displayHome(placeBody);
 const screenShot = "https://raw.githubusercontent.com/seeren-training/Agile/master/wiki/resources/03/12-Refactoring.png";
 const displayEdit = new EditComponent();
+const displaySave = new SaveComponent();
 displayEdit.display(placeBody, screenShot);

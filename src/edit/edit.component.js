@@ -1,8 +1,10 @@
 import editHTML from './edit.component.html';
 import { FormatText } from '../formatText/format-text.component';
-import { Save } from '../save/save.component';
+import { SaveComponent } from '../save/save.component';
 import { Preview } from '../preview/preview.component';
+import { ModalComponent } from './modal/modal.component';
 import Cropper from 'cropperjs';
+import M from 'materialize-css';
 
 export class EditComponent {
 
@@ -20,72 +22,45 @@ export class EditComponent {
         const displaySave = document.querySelector('#aSave');
         const displayReturn = document.querySelector('#aReturnBtn');
         const elems = document.querySelectorAll('.fixed-action-btn');
-        const cropBtn = document.getElementById('cropBtn');
 
         imgPreview.src = screenShot;
 
         displayFormatText.onclick = () => { this.formatText(selector) };
         displaySave.onclick = () => { this.save(selector) };
         displayReturn.onclick = () => { this.return(selector) };
-        cropBtn.onclick = () => { this.crop(imgPreview) };
 
-        M.FloatingActionButton.init(elems, { direction: 'bottom', hoverEnabled: false });
+        this.crop(imgPreview);
+        document.addEventListener('DOMContentLoaded', function() {
+            M.FloatingActionButton.init(elems, { hoverEnabled: false });
+        });
     }
     formatText(selector, screenShot) {
         const displayText = new FormatText();
-        displayText.display(selector);
+        displayText.display(selector, screenShot);
     }
     save(selector, screenShot) {
-        const displaySave = new Save();
-        displaySave.display(selector);
+        const displaySave = new SaveComponent();
+        displaySave.display(selector, screenShot);
     }
     return (selector, screenShot) {
         const displayReturn = new Preview();
-        displayReturn.display(selector);
+        displayReturn.display(selector, screenShot);
     }
     crop(apercu) {
         const cropper = new Cropper(apercu, {});
+        const cropBtn = document.getElementById("cropBtn");
         cropBtn.addEventListener('click', () => {
             var imgurl = cropper.getCroppedCanvas().toDataURL();
             var apercuCadre = document.createElement("img");
             apercuCadre.src = imgurl;
-            document.getElementById("cropped_result").appendChild(apercuCadre);
+            const cropedRslt = document.getElementById("cropped_result");
+            cropedRslt.innerHTML = "";
+            cropedRslt.appendChild(apercuCadre);
+            this.displayModalImg(cropBtn);
         });
     }
+    displayModalImg(btn) {
+        const ref = btn.getAttribute("href").substring(1);
+        new ModalComponent(ref);
+    }
 }
-
-// export const displayBarreOption = (selector, screenShot) => {
-//     const apercu = document.querySelector(".myScan");
-//     apercu.src = screenShot;
-//     var cropBtn = document.querySelector("#cropBtn");
-//     // Cropper.setDefaults(options);
-
-
-
-
-//     const popUp = () => {
-//         var popup = document.querySelector(".popup");
-//         popup.classList.toggle("show");
-//     }
-
-//     const cropTheImage = () => {
-//         cropper.getCroppedCanvas({
-//             width: 160,
-//             height: 90,
-//             minWidth: 256,
-//             minHeight: 256,
-//             maxWidth: 4096,
-//             maxHeight: 4096,
-//             fillColor: '#fff',
-//             imageSmoothingEnabled: false,
-//             imageSmoothingQuality: 'high',
-//         })
-//     };
-
-
-//     var elems = document.querySelectorAll('.fixed-action-btn');
-//     var instances = M.FloatingActionButton.init(elems, { direction: 'bottom', hoverEnabled: false });
-
-//     // const imgIsModified = () => {
-//     //     screenShot === screenShot.
-//     // } En gros faire une fonction ou si le screenShot entrant est différent car il a été modifié, croppé/ rétrécit... alors c'est true.

@@ -1,19 +1,25 @@
-<div class="fixed-action-btn direction-bottom click-to-toggle topleftcorner">
-    <button class="btn-floating btn-large waves-effect waves-light greenproject btn btn-success"><i class="material-icons">add</i></button>
+<div class="fixed-action-btn direction-top click-to-toggle topleftcorner">
+    <!-- <div class="collapsible-body"> -->
+    <button class="btn-floating btn-large waves-effect waves-light greenproject btn btn-success"><i class="material-icons">mode_edit</i></button>
     <ul>
         <li>
-            <a class="btn-floating greyproject" type="button" id="cropBtn"><i class="material-icons">Crop</i></a>
+            <a class="btn-floating btn-large waves-effect waves-light greyproject savebutton" type="button" id="aSave"><i class="material-icons">save</i></a>
         </li>
         <li>
-            <a class="btn-floating greyproject" type="button"><i class="material-icons">remove_circle</i></a>
+            <a class="btn-floating btn-large waves-effect waves-light greyproject formatbtn" type="button" id="aBarreOpt"><i class="material-icons">text_format</i></a>
+        </li>
+        <li>
+            <a class="btn-floating btn-large waves-effect waves-light greyproject modal-trigger" type="button" id="cropBtn" href="#modal1"><i class="material-icons">crop</i></a>
         </li>
     </ul>
+    <!-- </div> -->
 </div>
-<a class="btn-floating btn-large waves-effect waves-light greenproject savebutton" type="button" id="aSave"><i class="material-icons">save</i></a>
 </div>
+<a class="btn-floating btn-large waves-effect waves-light greenproject returnbtn" type="button" id="aReturnBtn"><i class="material-icons">keyboard_return</i></a>
 <div class="cadre">
     <img class="myScan" id="imgToCrop">
 </div>
-<div id="cropped_result" class="popup"></div>
-<a class="btn-floating btn-large waves-effect waves-light greenproject formatbtn" type="button" id="aBarreOpt"><i class="material-icons">text_format</i></a>
-<a class="btn-floating btn-large waves-effect waves-light greenproject returnbtn" type="button" id="aReturnBtn"><i class="material-icons">keyboard_return</i></a>
+<div id="modal1" class="modal">
+    <div id="cropped_result" class="modal-content">
+    </div>
+</div>

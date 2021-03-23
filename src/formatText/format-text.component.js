@@ -1,14 +1,36 @@
 import formatTextHTML from './format-text.component.html'
-import { displaySave } from '../save/save.component';
-import { displayPreview } from '../preview/preview.component';
-import { displayBarreOption } from '../edit/edit.component'
+import { SaveComponent } from '../save/save.component';
+import { EditComponent } from '../edit/edit.component';
+import { Preview } from '../preview/preview.component';
+import M from 'materialize-css';
 
 export class FormatText {
-    constructor() {}
+    constructor() {
+
+    }
 
     display(selector, screenShot) {
-        const element = document.querySelector(selector);
-        element.innerHTML = formatTextHTML;
+
+        document.querySelector(selector).innerHTML = formatTextHTML;
+        const imgPreview = document.querySelector(".myScan");
+        const italicBtn = document.querySelector('.italicButton');
+        const borderColor = document.querySelector('.bordercolor');
+        const boldBtn = document.querySelector('.boldButton');
+        const underBtn = document.querySelector('.underlineButton');
+        const elems = document.querySelectorAll('.fixed-action-btn');
+
+        imgPreview.src = screenShot;
+
+        displaySave.onclick = () => { this.save(selector) };
+        displayReturn.onclick = () => { this.return(selector) };
+    }
+    save(selector, screenShot) {
+        const displaySave = new SaveComponent();
+        displaySave.display(selector, screenShot);
+    }
+    return (selector, screenShot) {
+        const displayReturn = new EditComponent();
+        displayReturn.display(selector, screenShot);
     }
 
 }
