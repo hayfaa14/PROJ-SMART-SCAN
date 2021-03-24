@@ -2,20 +2,28 @@ import { HomeComponent } from '../home/home.component';
 import { PreviewComponent } from '../preview/preview.component';
 import takePictureHTML from './../takePicture/take-picture.component.html'
 
-export class TakePictureComponent{
-    
-    constructor(selector){
-        this.selector=selector;
+export class TakePictureComponent {
+
+    constructor(selector) {
+        this.selector = selector;
         // this.video=document.querySelector("#video");
     }
 
     display() {
-        document.querySelector(this.selector).innerHTML=takePictureHTML;
-        this.startCamera();
+        document.querySelector(this.selector).innerHTML = takePictureHTML;
+        if (!window.cordova) {
+            this.startCamera();
+        } else {
+            window.cordova.plugins.diagnostic.requestCameraAuthorization(
+                () => { alert("camera va fonctionner"), this.startCamera() },
+                () => { alert("Permission pas donneé") },
+                window.cordova.plugins.diagnostic.permission.CAMERA,
+            )
+        }
     }
 
-    startCamera(){
-        var video=document.querySelector("#video")
+    startCamera() {
+        var video = document.querySelector("#video")
         var saveBtn = document.querySelector("#Save");
         var constraints = { audio: false, video: true };
         navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
@@ -39,13 +47,13 @@ export class TakePictureComponent{
             })
     }
 
-    restart(){
-        const homepage=new HomeComponent(this.selector);
+    restart() {
+        const homepage = new HomeComponent(this.selector);
         homepage.display()
     }
 
-    takePicture(){
-        var video=document.querySelector("#video")
+    takePicture() {
+        var video = document.querySelector("#video")
         var canvas = document.createElement('canvas');
         var monScan = document.querySelector(".monscan");
         canvas.width = video.offsetWidth;
@@ -58,9 +66,9 @@ export class TakePictureComponent{
         monScan.innerHTML = `<img id="impressionEcran"></img>`;
         var impressionEcran = document.querySelector("#impressionEcran");
         impressionEcran.setAttribute('src', data);
-        const previewpage=new PreviewComponent(this.selector,impressionEcran.src)
+        const previewpage = new PreviewComponent(this.selector, impressionEcran.src)
         previewpage.display()
-        // displayPreview(selector, impressionEcran.src);
+            // displayPreview(selector, impressionEcran.src);
     }
 
 
@@ -170,7 +178,7 @@ export class TakePictureComponent{
 // //     pictureAutho.onclick = () => {
 // //         restartCamera();
 // //         // displayPreview(selector)
-        
+
 // //     }
 // // }
 

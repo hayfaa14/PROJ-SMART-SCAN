@@ -351,6 +351,8 @@ dependencies {
 
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
+    implementation "androidx.legacy:legacy-support-v4:1.+"
+    implementation "androidx.appcompat:appcompat:1.+"
     // SUB-PROJECT DEPENDENCIES END
 }
 

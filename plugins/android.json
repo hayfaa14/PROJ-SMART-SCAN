@@ -9,6 +9,16 @@
   "installed_plugins": {
     "cordova-plugin-device": {
       "PACKAGE_NAME": "io.smartscan.app"
+    },
+    "cordova.plugins.diagnostic": {
+      "ANDROIDX_VERSION": "1.+",
+      "PACKAGE_NAME": "io.smartscan.app"
+    },
+    "cordova-custom-config": {
+      "PACKAGE_NAME": "io.smartscan.app"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.smartscan.app"
     }
   },
   "dependent_plugins": {}

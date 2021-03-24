@@ -1,53 +1,55 @@
 import editHTML from './edit.component.html';
 import { FormatText } from '../formatText/format-text.component';
 import { SaveComponent } from '../save/save.component';
-import { Preview } from '../preview/preview.component';
+import { PreviewComponent } from '../preview/preview.component';
 import { ModalComponent } from './modal/modal.component';
 import Cropper from 'cropperjs';
 import M from 'materialize-css';
 
 export class EditComponent {
 
-    constructor() {
-        // this.selector = selector;
-        // this.image = screenShot;
-        // this.cropper = new Cropper(this.image, {});
+    constructor(selector, screenshot) {
+        this.selector = selector;
+        this.screenshot = screenshot;
     }
 
-    display(selector, screenShot) {
-
-        document.querySelector(selector).innerHTML = editHTML;
+    display() {
+        // document.querySelector(selector).innerHTML = editHTML;
+        const editPage = document.querySelector(this.selector);
+        editPage.innerHTML = editHTML;
         const imgPreview = document.querySelector(".myScan");
         const displayFormatText = document.querySelector('#aBarreOpt');
         const displaySave = document.querySelector('#aSave');
         const displayReturn = document.querySelector('#aReturnBtn');
         const elems = document.querySelectorAll('.fixed-action-btn');
 
-        imgPreview.src = screenShot;
+        imgPreview.src = this.screenshot;
 
-        displayFormatText.onclick = () => { this.formatText(selector) };
-        displaySave.onclick = () => { this.save(selector) };
-        displayReturn.onclick = () => { this.return(selector) };
+        displayFormatText.onclick = () => { this.formatText(this.selector) };
+        displaySave.onclick = () => { this.save(this.selector) };
+        displayReturn.onclick = () => { this.return(this.selector) };
 
         this.crop(imgPreview);
-        document.addEventListener('DOMContentLoaded', function() {
-            M.FloatingActionButton.init(elems, { hoverEnabled: false });
+        document.addEventListener('DOMContentLoaded', () => {
+            const instance = M.FloatingActionButton.init(elems, { hoverEnabled: false });
         });
     }
-    formatText(selector, screenShot) {
-        const displayText = new FormatText();
-        displayText.display(selector, screenShot);
+    formatText() {
+        const displayText = new FormatText(this.selector, this.screenshot);
+        displayText.display();
     }
-    save(selector, screenShot) {
-        const displaySave = new SaveComponent();
-        displaySave.display(selector, screenShot);
+    save() {
+        const displaySave = new SaveComponent(this.selector, this.screenshot);
+        displaySave.display();
     }
-    return (selector, screenShot) {
-        const displayReturn = new Preview();
-        displayReturn.display(selector, screenShot);
+    return () {
+        const displayReturn = new PreviewComponent(this.selector, this.screenshot);
+        displayReturn.display();
     }
-    crop(apercu) {
-        const cropper = new Cropper(apercu, {});
+    crop() {
+        const imgPreview = document.querySelector(".myScan");
+        imgPreview.src = this.screenshot;
+        const cropper = new Cropper(imgPreview, {});
         const cropBtn = document.getElementById("cropBtn");
         cropBtn.addEventListener('click', () => {
             var imgurl = cropper.getCroppedCanvas().toDataURL();
@@ -60,6 +62,7 @@ export class EditComponent {
         });
     }
     displayModalImg(btn) {
+        // const btn = document.querySelector(".cropBtn");
         const ref = btn.getAttribute("href").substring(1);
         new ModalComponent(ref);
     }
