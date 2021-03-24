@@ -1,35 +1,53 @@
-import { displayBarreOption } from '../edit/edit.component';
-import { displayEcranPicture } from '../ecranPicture/ecranPicture';
-import { displaySave } from '../save/save.component';
-import { displaySend } from '../sending/sending.component';
-import previewHTML from './preview.component.html'
+import { TakePictureComponent } from '../takePicture/take-picture.component';
+import previewHTML from '../preview/preview.component.html'
+import { SaveComponent } from '../save/save.component';
+import { EditComponent } from '../edit/edit.component';
 
-export class Preview {
-    constructor() {}
+export class PreviewComponent {
 
-    display(selector) {
-        document.querySelector(selector).innerHTML = previewHTML;
+    constructor(selector, screenshot) {
+        this.selector = selector;
+        this.screenshot = screenshot;
     }
-}
-// export const displayPreview = (selector, screenShot) => {
-//     const previewPage = document.querySelector(selector);
-//     previewPage.innerHTML = previewHTML;
-//     const apercu = document.querySelector(".myScan");
-//     apercu.src = screenShot;
-//     const saveButton = document.querySelector(".saveBut");
-//     saveButton.onclick = (e) => {
-//         e.preventDefault;
-//         displaySave(selector, screenShot)
-//     }
-//     const myBut = document.querySelector('.returnbut');
-//     myBut.onclick = (e) => {
-//         e.preventDefault;
-//         displayEcranPicture(selector, screenShot);
-//     }
-//     const editBut = document.querySelector('.editBut');
-//     editBut.onclick = (e) => {
-//         e.preventDefault;
-//         displayBarreOption(selector, screenShot);
-//     }
 
-// }
+    display() {
+        document.querySelector(this.selector).innerHTML = previewHTML;
+
+        const apercu = document.querySelector(".myScan")
+        apercu.src = this.screenshot;
+
+        const saveButton = document.querySelector(".saveBut");
+        saveButton.onclick = (e) => {
+            e.preventDefault; 
+            this.savePicture()
+        }
+        const editButton = document.querySelector(".editBut")
+        editButton.onclick=(e)=>{
+            e.preventDefault;
+            this.editPicture();
+        }
+
+        const returnButton = document.querySelector(".returnBut")
+        returnButton.onclick=(e)=>{
+            e.preventDefault;
+            this.displayPicture();
+        }
+
+    }
+
+    editPicture() {
+        const editPage = new EditComponent(this.selector,this.screenshot);
+        editPage.display();
+    }
+
+    savePicture() {
+        const savePage = new SaveComponent(this.selector, this.screenshot);
+        savePage.display();
+    }
+
+    displayPicture() {
+        const picturePage = new TakePictureComponent(this.selector);
+        picturePage.display();
+    }
+    
+}

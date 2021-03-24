@@ -1,19 +1,21 @@
 export class File {
-    constructor() {
+
+    constructor(){
 
         /**
-         * @type(*)
+         * @type{*}
          */
-        this.result = null;
+        this.result=null;
 
         /**
-         * @type(String)
+         * @type{String}
          */
-        this.filename = null;
+        this.filename=null;
 
         /**
-         * @type(Boolean)
+         * @type{Boolean}
          */
-        this.shared = null;
+        this.shared=null;    
+        
     }
 }

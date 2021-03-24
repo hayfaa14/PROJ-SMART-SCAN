@@ -1,26 +1,13 @@
 import 'materialize-css';
-import { EditComponent } from './edit/edit.component'
-import { SaveComponent } from './save/save.component';
-// import { barreOptionJS } from './barreOption/barreOption';
-// import { formatTextJS } from './formatText/formatText';
-// import { displaySave } from './save/save';
-// import {displaySend} from './sending/sending'
-// import {displayEcranPicture} from './ecranPicture/ecranPicture'
-// import {displayFooter} from './foot/footer'
-// import {tryingEvent} from './save/example'
-// import {displayHome} from './home/home'
-// import {displayPreview} from './preview/preview.component'
-// // Materialize guidelines
+import { HomeComponent } from './home/home.component';
 
-// // var elems = document.querySelectorAll('.fixed-action-btn');
-// // var instances = M.FloatingActionButton.init(elems, { direction: 'bottom', hoverEnabled: false });
-// // M.Sidenav.init(document.querySelectorAll('.sidenav'));
+const selecteur="body"
+const exemple=new HomeComponent(selecteur);
+exemple.display()
 
-// // Materialize guidelines
-const placeBody = "body";
 
-// displayHome(placeBody);
-const screenShot = "./../assets/img/pen.png";
-const displayEdit = new EditComponent();
-const displaySave = new SaveComponent();
-displayEdit.display(placeBody, screenShot);
+
+
+ 
+
+
