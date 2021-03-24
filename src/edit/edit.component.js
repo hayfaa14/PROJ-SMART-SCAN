@@ -1,79 +1,66 @@
 import editHTML from './../edit/edit.component.html';
-// import { displayText } from '../formatText/formatText';
-import { PreviewComponent } from '../preview/preview.component';
+import { FormatTextComponent } from '../formatText/format-text.component';
 import { SaveComponent } from '../save/save.component';
-import {FormatTextComponent} from './../formatText/format-text.component';
-// import {displaySave} from '../save/save';
-// import {displayPreview} from '../preview/preview';
+import { PreviewComponent } from '../preview/preview.component';
+import { ModalComponent } from './modal/modal.component';
+import Cropper from 'cropperjs';
+import M from 'materialize-css';
 
+export class EditComponent {
 
-export class EditComponent{
+    constructor() {
+        // this.selector = selector;
+        // this.image = screenShot;
+        // this.cropper = new Cropper(this.image, {});
+    }
 
-        constructor(selector,screenshot){
-            this.selector=selector;
-            this.screenshot=screenshot;
-        }
+    display(selector, screenShot) {
 
-        display(){
-            const editPage=document.querySelector(this.selector);
-            editPage.innerHTML=editHTML
-            const aReturn = document.querySelector('#aReturnBtn');
-            aReturn.onclick=(e)=>{
-                e.preventDefault;
-                this.displayPreview();
-            }
-            const editText = document.querySelector('#aBarreOpt');
-            editText.onclick = (e) => {
-                e.preventDefault;
-                this.displayFormatText();
-            }
-        }
+        document.querySelector(selector).innerHTML = editHTML;
+        const imgPreview = document.querySelector(".myScan");
+        const displayFormatText = document.querySelector('#aBarreOpt');
+        const displaySave = document.querySelector('#aSave');
+        const displayReturn = document.querySelector('#aReturnBtn');
+        const elems = document.querySelectorAll('.fixed-action-btn');
 
-        cropPicture(){
+        imgPreview.src = screenShot;
 
-        }
-        
-        displaySave(){
-            const savePage=new SaveComponent(this.selector,this.screenshot);
-            savePage.display()
-        }
+        displayFormatText.onclick = () => { this.formatText(selector) };
+        displaySave.onclick = () => { this.save(selector) };
+        displayReturn.onclick = () => { this.return(selector) };
 
-        displayPreview(){
-      
-       const previewPage=new PreviewComponent(this.selector,this.screenshot);
-       previewPage.display();
-
-        }
-
-        displayFormatText(){
-            const formatTextPage=new FormatTextComponent(this.selector,this.screenshot);
-            formatTextPage.display();
-        }
-
+        this.crop(imgPreview);
+        document.addEventListener('DOMContentLoaded', function() {
+            M.FloatingActionButton.init(elems, { hoverEnabled: false });
+        });
+    }
+    formatText(selector, screenShot) {
+        const displayText = new FormatTextComponent();
+        displayText.display(selector, screenShot);
+    }
+    save(selector, screenShot) {
+        const displaySave = new SaveComponent();
+        displaySave.display(selector, screenShot);
+    }
+    return (selector, screenShot) {
+        const displayReturn = new PreviewComponent();
+        displayReturn.display(selector, screenShot);
+    }
+    crop(apercu) {
+        const cropper = new Cropper(apercu, {});
+        const cropBtn = document.getElementById("cropBtn");
+        cropBtn.addEventListener('click', () => {
+            var imgurl = cropper.getCroppedCanvas().toDataURL();
+            var apercuCadre = document.createElement("img");
+            apercuCadre.src = imgurl;
+            const cropedRslt = document.getElementById("cropped_result");
+            cropedRslt.innerHTML = "";
+            cropedRslt.appendChild(apercuCadre);
+            this.displayModalImg(cropBtn);
+        });
+    }
+    displayModalImg(btn) {
+        const ref = btn.getAttribute("href").substring(1);
+        new ModalComponent(ref);
+    }
 }
-// export const barreOptionJS = (selector) => {
-//     const element = document.querySelector(selector);
-//     element.innerHTML = barreOptionHTML;
-
-//     var elems = document.querySelectorAll('.fixed-action-btn');
-//     var instances = M.FloatingActionButton.init(elems, { direction: 'bottom', hoverEnabled: false });
-
-//     const aBarreOpt = document.querySelector('#aBarreOpt');
-//     aBarreOpt.onclick = () => {
-//         displayText(selector);
-//         return false;
-//     }
-
-//     const aSave = document.querySelector('#aSave');
-//     aSave.onclick = () => {
-//         displaySave(selector);
-//         return false;
-//     }
-// }
-//     const aReturn = document.querySelector('#aReturnBtn');
-//     aReturn.onclick = () => {
-//         displayPreview(selector);
-//         return false;
-//     }
-
-// };

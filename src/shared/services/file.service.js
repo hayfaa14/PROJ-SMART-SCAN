@@ -11,12 +11,9 @@ export class FileService {
     static getFile(){
         return myFile;
     }
-    
     static setStockFile(element){
         myFile.result=element;
     }
-
-    
 
     static saveOption(file){
 

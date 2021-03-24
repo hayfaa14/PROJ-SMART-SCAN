@@ -13,13 +13,6 @@ export class Image {
          * @type{}
          * */
          this.img=null
-
-    
-    
         }
-
-
-
-
 
 }

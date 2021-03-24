@@ -6,6 +6,7 @@ import saveHTML from './../save/save.component.html'
 import html2pdf from 'html2pdf.js';
 import { PreviewComponent } from '../preview/preview.component';
 import { File } from '../shared/models/file.model';
+import {Image} from '../shared/models/image.model';
 import { SendComponent } from '../sending/sending.component';
 import { FileService } from '../shared/services/file.service';
 import {SaveService} from '../shared/services/save.service';
@@ -57,8 +58,7 @@ export class SaveComponent {
     }
 
     chooseFormat(choice) {
-        const apercu = document.createElement("img")
-        apercu.src = this.screenshot;
+        
         SaveService.saveFormat(choice)
         // const myFile = new File();
         // var text = choice.textContent;

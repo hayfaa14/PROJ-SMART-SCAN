@@ -1,5 +1,6 @@
 import { HomeComponent } from '../home/home.component';
 import { PreviewComponent } from '../preview/preview.component';
+import { ImageService } from '../shared/services/image.service';
 import takePictureHTML from './../takePicture/take-picture.component.html'
 
 export class TakePictureComponent{
@@ -58,6 +59,7 @@ export class TakePictureComponent{
         monScan.innerHTML = `<img id="impressionEcran"></img>`;
         var impressionEcran = document.querySelector("#impressionEcran");
         impressionEcran.setAttribute('src', data);
+        ImageService.setImage(impressionEcran.src)
         const previewpage=new PreviewComponent(this.selector,impressionEcran.src)
         previewpage.display()
         // displayPreview(selector, impressionEcran.src);

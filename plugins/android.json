@@ -16,6 +16,9 @@
     "cordova-plugin-camera": {
       "ANDROID_SUPPORT_V4_VERSION": "27.+",
       "PACKAGE_NAME": "io.hayfaa.smartscan"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.hayfaa.smartscan"
     }
   },
   "dependent_plugins": {

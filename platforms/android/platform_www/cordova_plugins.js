@@ -228,12 +228,21 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "CameraPopoverHandle"
       ]
+    },
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
     }
   ];
   module.exports.metadata = {
     "cordova-plugin-splashscreen": "6.0.0",
     "cordova-plugin-file": "6.0.2",
     "cordova-plugin-media": "5.0.3",
-    "cordova-plugin-camera": "5.0.1"
+    "cordova-plugin-camera": "5.0.1",
+    "cordova-plugin-device": "2.0.3"
   };
 });
