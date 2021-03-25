@@ -23,15 +23,15 @@ export class EditComponent {
         const displayReturn = document.querySelector('#aReturnBtn');
         const elems = document.querySelectorAll('.fixed-action-btn');
 
-        imgPreview.src = this.screenshot;
-
         displayFormatText.onclick = () => { this.formatText(this.selector) };
         displaySave.onclick = () => { this.save(this.selector) };
         displayReturn.onclick = () => { this.return(this.selector) };
 
         this.crop(imgPreview);
+
         document.addEventListener('DOMContentLoaded', () => {
-            const instance = M.FloatingActionButton.init(elems, { hoverEnabled: false });
+            M.FloatingActionButton.init(elems, { hoverEnabled: false });
+            imgPreview.src = this.screenshot;
         });
     }
     formatText() {
