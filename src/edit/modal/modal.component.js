@@ -1,5 +1,3 @@
-import displayEdit from "../../edit/edit.component"
-
 export class ModalComponent {
     constructor(href) {
         this.href = href

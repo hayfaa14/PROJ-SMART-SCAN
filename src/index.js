@@ -5,7 +5,9 @@ import { HomeComponent } from './home/home.component';
 
 const display=()=>{
     alert("display");
-
+    const selecteur="body"
+    const exemple=new HomeComponent(selecteur);
+    exemple.display()
 };
 
 if (window.cordova){
@@ -13,14 +15,13 @@ if (window.cordova){
         display();
      });
 }
-else {
-    display
-}
+
+
+
+
 // alert(cordova);
 
-const selecteur="body"
-const exemple=new HomeComponent(selecteur);
-exemple.display()
+
 
 
 

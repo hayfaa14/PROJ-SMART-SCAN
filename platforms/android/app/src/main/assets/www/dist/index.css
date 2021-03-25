@@ -6683,25 +6683,10 @@ main {
   bottom: 7em;
   right: 20%; }
 
-.topleftcorner {
-  position: relative;
-  top: 1em;
-  left: -22.5em; }
-
-.savebutton {
+#aReturnBtn {
   position: relative;
   left: 1em;
-  top: 40em; }
-
-.formatbtn {
-  position: relative;
-  left: 1em;
-  top: 40em; }
-
-.returnbtn {
-  position: relative;
-  left: 1em;
-  top: 40em; }
+  top: 47em; }
 
 .material-icons {
   color: #07060a !important; }

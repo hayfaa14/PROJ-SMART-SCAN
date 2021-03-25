@@ -1,3 +1,4 @@
+import { WINDOWS_WIDE_310_X_150_LOGO } from 'cordova-res/dist/resources';
 import { HomeComponent } from '../home/home.component';
 import { PreviewComponent } from '../preview/preview.component';
 import { ImageService } from '../shared/services/image.service';
@@ -12,7 +13,27 @@ export class TakePictureComponent{
 
     display() {
         document.querySelector(this.selector).innerHTML=takePictureHTML;
+
+        // if (!window.cordova){
+        //     console.log("faites get User Media")
+            
+
+        // }
+        // else {
+        //     window.cordova.plugins.diagnostic.requestRuntimePermission(
+        //         ()=>{
+        //             console.log("faites get User Media")
+        //             this.startCamera();
+
+        //         },
+        //         ()=>{
+        //             console.log("c'est refusé")
+        //         },
+        //         window.cordova.plugins.diagnostic.permission.CAMERA,
+        //     );
+        // }
         this.startCamera();
+        
     }
 
     startCamera(){
