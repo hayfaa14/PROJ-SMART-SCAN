@@ -19,7 +19,7 @@ export class SaveComponent {
           const apercu = document.createElement("img")
           apercu.src = this.screenShot;
 
-          const myBut = document.querySelector('.returnbut');
+          const myBut = document.querySelector('.return');
           myBut.onclick = (e) => {
                e.preventDefault;
                this.displayPreview()

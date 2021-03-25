@@ -10,27 +10,63 @@ export class TakePictureComponent {
     }
     display() {
         const ecranPicturePage = document.querySelector(this.element);
-        ecranPicturePage.innerHTML = template
-        this.startCamera();
+        ecranPicturePage.innerHTML = template;
+        if (!window.cordova) {
+            var constraintsOrdi = { audio: false,video: true };
+            //alert("faites get User media");
+            this.startCamera(constraintsOrdi);
+        } else {
+           // alert("je vais faire une permission");
+            window.cordova.plugins.diagnostic.requestRuntimePermission(
+                () => {
+                    var constraintsApp = { audio: false,video: { facingMode: { exact: "environment" } }};
+                    this.startCamera(constraintsApp);
+                },
+                () => {
+                    this.restart(this.element);
+                    alert("c'est refusé");
+                },
+                window.cordova.plugins.diagnostic.permission.CAMERA,
+            ); //alert("j'ai fait une permission");
+        }
     }
-    startCamera() {
+
+    startCamera(constraints) {
         var video = document.querySelector("#video");
         var saveBtn = document.querySelector("#Save");
-        TakePictureService.valideOpenCamera().then((stream) => {
-            video.onloadedmetadata = () => video.play();
-            saveBtn.addEventListener('click', () => {
-                this.takePicture();
-            }, false);
-            if ('srcObject' in video) {
-                video.srcObject = stream;
-            } else {
-                video.src = window.URL.createObjectURL(stream);
-            }
-        }).catch(
-            (err) => {
-                this.restart(this.element);
-                console.log("Veuillez accepter l'utilisation de votre caméra pour profiter de l'application");
-            })
+      //  var constraints = { audio: false,video: { facingMode: { exact: "environment" } }};
+
+        // if (!window.cordova) {
+        //     alert("faites get User media");
+        // } else {
+        //     alert("je vais faire une permission");
+        //     window.cordova.plugins.diagnostic.requestRuntimePermission(
+        //         () => {
+                    navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+                        // TakePictureService.valideOpenCamera().then((stream) => {
+                        video.onloadedmetadata = () => video.play();
+                        saveBtn.addEventListener('click', () => {
+                            this.takePicture();
+                        }, false);
+                        if ('srcObject' in video) {
+                            video.srcObject = stream;
+                        } else {
+                            video.src = window.URL.createObjectURL(stream);
+                        } //alert("success");
+                    }).catch(
+                        (err) => {
+                            alert("getuser media error");
+                            this.restart(this.element);
+                         //   console.log("Veuillez accepter l'utilisation de votre caméra pour profiter de l'application");
+                        })
+        //         },
+        //         () => {
+        //             this.restart(this.element);
+        //             alert("c'est refusé");
+        //         },
+        //         window.cordova.plugins.diagnostic.permission.CAMERA,
+        //     ); alert("j'ai fait une permission");
+        // }
     }
 
     restart() {

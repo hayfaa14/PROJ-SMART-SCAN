@@ -32,8 +32,8 @@ export class PreviewComponent {
             }
     }
     editPicture() {
-        const displayEdit = new EditComponent(this.element, this.screenShot)
-        displayEdit.display()
+        const displayEdit = new EditComponent();
+        displayEdit.display(this.element, this.screenShot)
     }
 
     savePicture() {

@@ -4,6 +4,13 @@ npm de skeleton avec "webpack et babel pour compiler sur tel"
 npm install material-design-icons
 npm install materialize-css@next
 npm install --save html2pdf.js
+npm install cropperjs
+npx cordova platform add android@9 
+npm install cordova-res
+npx cordova plugin add cordova-plugin-splashscreen
+npx cordova plugin add cordova-plugin-device 
+npx cordova plugin add cordova-custom-config
+npx cordova plugin add cordova.plugins.diagnostic
 
 # OBJECT ORIENTED
  ## COMPONENTS

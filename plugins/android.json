@@ -7,7 +7,17 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-custom-config": {
+      "PACKAGE_NAME": "io.line.projsmartscan"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.line.projsmartscan"
+    },
     "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.line.projsmartscan"
+    },
+    "cordova.plugins.diagnostic": {
+      "ANDROIDX_VERSION": "1.+",
       "PACKAGE_NAME": "io.line.projsmartscan"
     }
   },

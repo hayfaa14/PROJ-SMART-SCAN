@@ -1,6 +1,6 @@
 .cadre{
-    height: 70vh;
-    width: 70vw;
+    height: 80vh;
+    width: 90vw;
     border: 3px solid #00766c;
     border-radius: 10px;
     position:fixed;
@@ -8,11 +8,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    bottom: 20vh;
-    left:15vw
+    bottom: 12vh;
+    left:5vw
 }
 #video{
 width: 100%;
+
 }
 
 .clic{
